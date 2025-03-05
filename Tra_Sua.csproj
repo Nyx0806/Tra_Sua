@@ -118,9 +118,26 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="ảnh\Screenshot 2025-03-05 230209.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="ảnh\Screenshot 2025-03-03 185044.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ảnh\Screenshot 2025-03-05 232036.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ảnh\Screenshot 2025-03-05 232815.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ảnh\Screenshot 2025-03-05 233432.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ảnh\Screenshot 2025-03-05 233637.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ảnh\Screenshot 2025-03-05 233720.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

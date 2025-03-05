@@ -38,7 +38,7 @@
         </StackPanel>
 
         <Image HorizontalAlignment="Left" Height="66" Margin="100,24,0,0" VerticalAlignment="Top" Width="255" RenderTransformOrigin="0.5,0.5"
-               Source="F:\C_C#_C++\Visual Studio Code\Tra_Sua\ảnh\Screenshot 2025-03-03 185044.png">
+               Source="C:\Users\NITRO 5\Source\Repos\Tra_Sua\ảnh\Screenshot 2025-03-03 185044.png">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -48,5 +48,6 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
+        <Button Content="Thoát" HorizontalAlignment="Left" Margin="305,355,0,0" VerticalAlignment="Top" Height="32" Width="66" BorderBrush="#F4CBA0" BorderThickness="3" Background="White" FontWeight="Bold" Click="Button_Click_2" />
     </Grid>
 </Window>

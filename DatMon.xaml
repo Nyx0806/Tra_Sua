@@ -8,11 +8,10 @@
              d:DesignHeight="700" d:DesignWidth="1129" Height="672">
     <Grid Background="#F4D8B5" Margin="0,0,0,10" >
 
-        <Button Content="Bàn 1" HorizontalAlignment="Left" Margin="47,1,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="36" FontWeight="Bold" Background="#FFDEB384"/>
-        <Button Content="Bàn 2" HorizontalAlignment="Left" Margin="229,1,0,0" VerticalAlignment="Top" Height="134" Width="132" RenderTransformOrigin="0.021,0.29" FontSize="36" FontWeight="Bold" Background="#FFDEB384"/>
-        <Button Content="Bàn 3" HorizontalAlignment="Left" Margin="412,1,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="36" FontWeight="Bold" Background="#FFDEB384"/>
-        <Button Content="Bàn 4" HorizontalAlignment="Left" Margin="592,1,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="36" FontWeight="Bold" Background="#FFDEB384"/>
-
+        <Button Content="Bàn 1" HorizontalAlignment="Left" Margin="47,1,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384" Click="Button_Click"/>
+        <Button Content="Bàn 2" HorizontalAlignment="Left" Margin="229,1,0,0" VerticalAlignment="Top" Height="134" Width="132" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
+        <Button Content="Bàn 3" HorizontalAlignment="Left" Margin="412,1,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
+        <Button Content="Bàn 4" HorizontalAlignment="Left" Margin="592,1,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
         <Border HorizontalAlignment="Left" Margin="748,6,0,0" VerticalAlignment="Top" Height="615" Width="366" Background="Tan" BorderBrush="Black" BorderThickness="1">
             <Grid>
                 <Grid.RowDefinitions>
@@ -50,18 +49,19 @@
                 </StackPanel>
             </Grid>
         </Border>
-        <Button Content="Bàn 1" HorizontalAlignment="Left" Margin="47,166,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="36" FontWeight="Bold" Background="#FFDEB384"/>
-        <Button Content="Bàn 2" HorizontalAlignment="Left" Margin="229,166,0,0" VerticalAlignment="Top" Height="134" Width="132" RenderTransformOrigin="0.021,0.29" FontSize="36" FontWeight="Bold" Background="#FFDEB384"/>
-        <Button Content="Bàn 3" HorizontalAlignment="Left" Margin="412,166,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="36" FontWeight="Bold" Background="#FFDEB384"/>
-        <Button Content="Bàn 4" HorizontalAlignment="Left" Margin="592,166,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="36" FontWeight="Bold" Background="#FFDEB384"/>
-        <Button Content="Bàn 1" HorizontalAlignment="Left" Margin="47,322,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="36" FontWeight="Bold" Background="#FFDEB384"/>
-        <Button Content="Bàn 2" HorizontalAlignment="Left" Margin="229,322,0,0" VerticalAlignment="Top" Height="134" Width="132" RenderTransformOrigin="0.021,0.29" FontSize="36" FontWeight="Bold" Background="#FFDEB384"/>
-        <Button Content="Bàn 3" HorizontalAlignment="Left" Margin="412,322,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="36" FontWeight="Bold" Background="#FFDEB384"/>
-        <Button Content="Bàn 4" HorizontalAlignment="Left" Margin="592,322,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="36" FontWeight="Bold" Background="#FFDEB384"/>
-        <Button Content="Bàn 1" HorizontalAlignment="Left" Margin="47,481,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="36" FontWeight="Bold" Background="#FFDEB384"/>
-        <Button Content="Bàn 2" HorizontalAlignment="Left" Margin="229,481,0,0" VerticalAlignment="Top" Height="134" Width="132" RenderTransformOrigin="0.021,0.29" FontSize="36" FontWeight="Bold" Background="#FFDEB384"/>
-        <Button Content="Bàn 3" HorizontalAlignment="Left" Margin="412,481,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="36" FontWeight="Bold" Background="#FFDEB384"/>
-        <Button Content="Bàn 4" HorizontalAlignment="Left" Margin="592,481,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="36" FontWeight="Bold" Background="#FFDEB384"/>
+        <Button Content="Bàn 5" HorizontalAlignment="Left" Margin="47,166,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
+        <Button Content="Bàn 6" HorizontalAlignment="Left" Margin="229,166,0,0" VerticalAlignment="Top" Height="134" Width="132" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
+        <Button Content="Bàn 7" HorizontalAlignment="Left" Margin="412,166,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
+        <Button Content="Bàn 8" HorizontalAlignment="Left" Margin="592,166,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
+        <Button Content="Bàn 9" HorizontalAlignment="Left" Margin="47,322,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
+        <Button Content="Bàn 19" HorizontalAlignment="Left" Margin="229,322,0,0" VerticalAlignment="Top" Height="134" Width="132" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
+        <Button Content="Bàn 11" HorizontalAlignment="Left" Margin="412,322,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
+        <Button Content="Bàn 12" HorizontalAlignment="Left" Margin="592,322,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
+        <Button Content="Bàn 13" HorizontalAlignment="Left" Margin="47,481,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
+        <Button Content="Bàn 14" HorizontalAlignment="Left" Margin="229,481,0,0" VerticalAlignment="Top" Height="134" Width="132" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
+        <Button Content="Bàn 15" HorizontalAlignment="Left" Margin="412,481,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
+        <Button Content="Bàn 16" HorizontalAlignment="Left" Margin="592,481,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
         <Button Content="In Đơn " HorizontalAlignment="Left" Margin="1013,585,0,0" VerticalAlignment="Top" Height="30" Width="92" FontWeight="Bold"/>
+        <Grid x:Name="dat" Margin="-18,0,422,0"/>
     </Grid>
 </UserControl>

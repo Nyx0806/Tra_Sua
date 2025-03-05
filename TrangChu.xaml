@@ -6,7 +6,6 @@
         xmlns:local="clr-namespace:Tra_Sua"
         mc:Ignorable="d"
         Title="TrangChu" Height="866" Width="1500"
-                WindowState="Maximized" WindowStyle="None"  
         Background="#F4D8B5">
 
     <Grid>

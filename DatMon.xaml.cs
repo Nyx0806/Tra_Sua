@@ -24,7 +24,19 @@ namespace Tra_Sua
         {
             InitializeComponent();
         }
-
- 
+        private void Mo(Grid panel1, UserControl activeform, UserControl childform)
+        {
+            if (activeform != null)
+            {
+                panel1.Children.Remove(activeform); // Xóa giao diện cũ
+            }
+            activeform = childform; // Gán giao diện mới
+            panel1.Children.Add(childform); // Thêm vào Grid
+        }
+        UserControl activeform = null;
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Mo(dat, activeform, new Menu());
+        }
     }
 }
