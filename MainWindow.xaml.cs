@@ -46,12 +46,39 @@ namespace Tra_Sua
             }
         }
 
+        Modify modify = new Modify();
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             TrangChu trangChu = new TrangChu();
-            MessageBox.Show("Đăng nhập thành công!");
-            this.Close();
-            trangChu.Show();
+            string tenDangNhap = Text_TenDangNhap.Text;
+            string matKhau = text_MatKhau.Password;
+            if (tenDangNhap.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên đăng nhập!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                Text_TenDangNhap.Focus();
+            }
+            else if (matKhau.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                text_MatKhau.Focus();
+            }
+            else
+            {
+                string query = "SELECT * FROM TaiKhoan WHERE tenTK = '" + tenDangNhap + "' AND matkhau = '" + matKhau + "'";
+                if (modify.TaiKhoans(query).Count > 0)
+                {
+                    MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                    this.Close();
+                    trangChu.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Tên tài khoản hoặc mật khẩu không đúng!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Text_TenDangNhap.Clear();
+                    text_MatKhau.Clear();
+                    Text_TenDangNhap.Focus();
+                }
+            }
         }
 
         private void Text_TenDangNhap_TextChanged(object sender, TextChangedEventArgs e)
