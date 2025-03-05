@@ -56,9 +56,7 @@ namespace Tra_Sua
 
         private void Text_TenDangNhap_TextChanged(object sender, TextChangedEventArgs e)
         {
-            string tenDangNhap = Text_TenDangNhap.Text;
-            string mk = text_MatKhau.Password;
-            Clear();
+
         }
     }
 }
