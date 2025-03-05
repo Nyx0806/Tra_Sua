@@ -30,5 +30,17 @@ namespace Tra_Sua
             }
             return taiKhoans;
         }
+        public void ThucThi(string query)
+        {
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlCommand.ExecuteNonQuery(); // thực thi câu truy vấn
+
+                sqlConnection.Close();
+            }
+        }
     }
 }
