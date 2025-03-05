@@ -55,7 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\Ban.cs" />
+    <Compile Include="Model\ChiTietHoaDon.cs" />
+    <Compile Include="Model\HoaDon.cs" />
+    <Compile Include="Model\KhachHang.cs" />
     <Compile Include="Model\NhanVien.cs" />
+    <Compile Include="Model\SanPham.cs" />
     <Compile Include="Sql\Connection.cs" />
     <Compile Include="DatMon.xaml.cs">
       <DependentUpon>DatMon.xaml</DependentUpon>
