@@ -58,6 +58,7 @@ namespace Tra_Sua
         {
             string tenDangNhap = Text_TenDangNhap.Text;
             string mk = text_MatKhau.Password;
+            Clear();
         }
     }
 }
