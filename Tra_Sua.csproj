@@ -67,6 +67,9 @@
     <Compile Include="ChayBan.xaml.cs">
       <DependentUpon>ChayBan.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PhaChe.xaml.cs">
+      <DependentUpon>PhaChe.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Sql\Connection.cs" />
     <Compile Include="DatMon.xaml.cs">
       <DependentUpon>DatMon.xaml</DependentUpon>
@@ -76,6 +79,9 @@
     </Compile>
     <Compile Include="Sql\Modify.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
+    <Compile Include="ThuNgan.xaml.cs">
+      <DependentUpon>ThuNgan.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TrangChu.xaml.cs">
       <DependentUpon>TrangChu.xaml</DependentUpon>
     </Compile>
@@ -107,6 +113,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ChayBan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PhaChe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ThuNgan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -19,7 +19,7 @@
             <ComboBoxItem Content="Chạy Bàn"/>
         </ComboBox>
 
-        <Grid x:Name="chayban" Margin="0,96,0,0"/>
+        <Grid x:Name="chucvu" Margin="0,96,0,0"/>
 
 
     </Grid>

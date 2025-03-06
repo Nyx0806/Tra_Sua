@@ -46,15 +46,15 @@ namespace Tra_Sua
                 switch (selectedText)
                 {
                     case "Thu Ngân":
-                       
+                        Mo(chucvu, activeform, new ThuNgan());
                         break;
 
                     case "Pha Chế":
-                        MessageBox.Show("Bạn đã chọn: Pha Chế");
+                        Mo(chucvu, activeform, new PhaChe());
                         break;
 
                     case "Chạy Bàn":
-                        Mo(chayban, activeform, new ChayBan());
+                        Mo(chucvu, activeform, new ChayBan());
                         break;
 
                     default:
