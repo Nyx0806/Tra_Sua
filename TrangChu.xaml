@@ -9,24 +9,22 @@
         Background="#F4D8B5">
 
     <Grid>
-        <DockPanel Background="#F4D8B5" Width="298" HorizontalAlignment="Left">
 
-            <StackPanel DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="10">
-                <Ellipse Width="80" Height="80" Fill="White"/>
-                <TextBlock Text="admin" FontWeight="Bold" HorizontalAlignment="Center"/>
-            </StackPanel>
-
-            <Button DockPanel.Dock="Top" Content="🏠 Trang chủ" Height="70" FontSize="36" Background="Transparent" BorderBrush="#CE9859" BorderThickness="3"/>
-            <Button DockPanel.Dock="Top" Content="🧾 Đặt Món" Height="70" FontSize="36" Background="Transparent" Click="Button_Click_1" BorderBrush="#CE9859" BorderThickness="3"/>
-            <Button DockPanel.Dock="Top" Content="📊 Doanh thu" Height="70" FontSize="36" Background="Transparent" BorderBrush="#CE9859" BorderThickness="3"/>
-            <Button DockPanel.Dock="Top" Content="👥 Nhân viên" Height="70" FontSize="36" Background="Transparent" BorderBrush="#CE9859" BorderThickness="3"/>
-            <Button DockPanel.Dock="Top" Content="🍹 Cập nhật món" Height="70" FontSize="36" Background="Transparent" BorderBrush="#CE9859" BorderThickness="3"/>
-
-            <StackPanel VerticalAlignment="Bottom">
-                <Button Content="🚪 Đăng xuất" Height="70" FontSize="36" Background="Transparent" Click="Button_Click" BorderBrush="#CE9859" BorderThickness="3"/>
-            </StackPanel>
-        </DockPanel>
-        <Grid x:Name="chinhchu" Margin="303,118,10,10"/>
+        <Button Width="100" Height="100">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <!-- Hình tròn -->
+                        <Ellipse Stroke="#CE9859" StrokeThickness="2" Margin="-625,-366,576,317">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="C:\Users\NITRO 5\Source\Repos\Tra_Sua\ảnh\52ccb1c99a7b35741fa8d182419252dd.jpg" Stretch="UniformToFill"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Grid x:Name="chinhchu" Margin="298,118,15,10"/>
         <Border CornerRadius="20" 
         BorderThickness="3" 
         BorderBrush="#CE9859" 
@@ -45,7 +43,138 @@
                 </TextBlock.Effect>
             </TextBlock>
         </Border>
+        <Border Background="#F2C193" Width="288" Height="652" CornerRadius="20"
+        HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,163,0,0">
+            <TextBlock  Foreground="White" FontSize="16"
+               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Border>
 
+        <Button Content="🏠 Trang chủ" HorizontalAlignment="Left" Margin="33,191,0,0" 
+        VerticalAlignment="Top" Height="60" Width="223" 
+        BorderBrush="#F4CBA0" BorderThickness="3" Background="#F2C193" 
+        FontWeight="Bold" Click="Button_Click_2" FontSize="24">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                CornerRadius="10" Padding="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="🧾 Đặt Món" HorizontalAlignment="Left" Margin="33,270,0,0" 
+            VerticalAlignment="Top" Height="60" Width="223" 
+            BorderBrush="#F4CBA0" BorderThickness="3" Background="#F2C193" 
+            FontWeight="Bold" Click="Button_Click_1" FontSize="24">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" 
+                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                    BorderThickness="{TemplateBinding BorderThickness}" 
+                                    CornerRadius="10" Padding="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="📊 Doanh thu" HorizontalAlignment="Left" Margin="33,343,0,0" 
+            VerticalAlignment="Top" Height="61" Width="223" 
+            BorderBrush="#F4CBA0" BorderThickness="3" Background="#F2C193" 
+            FontWeight="Bold" FontSize="24" Click="Button_Click_4">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" 
+                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                    BorderThickness="{TemplateBinding BorderThickness}" 
+                                    CornerRadius="10" Padding="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="👥 Nhân viên" HorizontalAlignment="Left" Margin="33,420,0,0" 
+            VerticalAlignment="Top" Height="60" Width="223" 
+            BorderBrush="#F4CBA0" BorderThickness="3" Background="#F2C193" 
+            FontWeight="Bold" Click="Button_Click_3" FontSize="24">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" 
+                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                    BorderThickness="{TemplateBinding BorderThickness}" 
+                                    CornerRadius="10" Padding="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="🍹 Cập nhật món" HorizontalAlignment="Left" Margin="33,495,0,0" 
+            VerticalAlignment="Top" Height="61" Width="223" 
+            BorderBrush="#F4CBA0" BorderThickness="3" Background="#F2C193" 
+            FontWeight="Bold" Click="Button_Click_2" FontSize="24">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" 
+                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                    BorderThickness="{TemplateBinding BorderThickness}" 
+                                    CornerRadius="10" Padding="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="🚪 Đăng xuất" HorizontalAlignment="Left" Margin="33,746,0,0" 
+            VerticalAlignment="Top" Height="61" Width="223" 
+            BorderBrush="#F4CBA0" BorderThickness="3" Background="#F2C193" 
+            FontWeight="Bold" Click="Button_Click" FontSize="24">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" 
+                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                    BorderThickness="{TemplateBinding BorderThickness}" 
+                                    CornerRadius="10" Padding="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
 
     </Grid>
 </Window>

@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="Tra_Sua.NhanVien"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Tra_Sua"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1129" Height="672">
+    <Grid Background="#F4D8B5" Margin="0,0,0,10" >
+        <TextBlock HorizontalAlignment="Left" Margin="82,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="Chức vụ &#xD;&#xA;" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Height="50" Width="94"/>
+        <ComboBox FontSize="20"
+          Foreground="Brown" Background="#F4CBA0"
+          FontWeight="Bold"
+          BorderThickness="0" Padding="5" Margin="123,17,873,612"
+          SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="Thu Ngân"/>
+            <ComboBoxItem Content="Pha Chế"/>
+            <ComboBoxItem Content="Chạy Bàn"/>
+        </ComboBox>
+
+        <Grid x:Name="chayban" Margin="0,96,0,0"/>
+
+
+    </Grid>
+</UserControl>

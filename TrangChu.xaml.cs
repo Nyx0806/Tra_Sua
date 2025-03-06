@@ -45,5 +45,20 @@ namespace Tra_Sua
         {
             Mo(chinhchu, activeform, new DatMon());
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Mo(chinhchu,activeform, new TrangChuAnh()); 
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Mo(chinhchu, activeform, new NhanVien());
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+             
+        }
     }
 }

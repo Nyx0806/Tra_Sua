@@ -22,6 +22,7 @@ namespace Tra_Sua
     /// </summary>
     public partial class Menu : UserControl
     {
+
         private DatMon datMon;
         public Menu(DatMon datMon)
         {

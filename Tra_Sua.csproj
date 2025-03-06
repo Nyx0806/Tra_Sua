@@ -61,6 +61,12 @@
     <Compile Include="Model\KhachHang.cs" />
     <Compile Include="Model\NhanVien.cs" />
     <Compile Include="Model\SanPham.cs" />
+    <Compile Include="NhanVien.xaml.cs">
+      <DependentUpon>NhanVien.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChayBan.xaml.cs">
+      <DependentUpon>ChayBan.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Sql\Connection.cs" />
     <Compile Include="DatMon.xaml.cs">
       <DependentUpon>DatMon.xaml</DependentUpon>
@@ -72,6 +78,9 @@
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="TrangChu.xaml.cs">
       <DependentUpon>TrangChu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChuAnh.xaml.cs">
+      <DependentUpon>TrangChuAnh.xaml</DependentUpon>
     </Compile>
     <Page Include="DatMon.xaml">
       <SubType>Designer</SubType>
@@ -93,7 +102,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="NhanVien.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChayBan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TrangChu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TrangChuAnh.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -147,6 +168,27 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Form\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ảnh\Screenshot 2025-03-06 135948.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ảnh\Screenshot 2025-03-06 140144.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ảnh\Screenshot 2025-03-06 140306.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ảnh\Screenshot 2025-03-06 140637.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ảnh\Screenshot 2025-03-06 140651.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ảnh\Screenshot 2025-03-06 140713.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ảnh\52ccb1c99a7b35741fa8d182419252dd.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
