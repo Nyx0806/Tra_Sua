@@ -9,7 +9,7 @@ namespace Tra_Sua
 {
     class Connection
     {
-        public static string stringConnection = @"Data Source=ThanhBin;Persist Security Info=True;User ID=sa;Password=***********;Integrated Security=True";
+        public static string stringConnection = @"Data Source=RAPHAEL\RAPHAELSERVER;Initial Catalog=Quanlitrasua;Persist Security Info=True;User ID=sa;Password=***********;Integrated Security=True";
         public static SqlConnection GetSqlConnection()
         {
             return new SqlConnection(stringConnection);

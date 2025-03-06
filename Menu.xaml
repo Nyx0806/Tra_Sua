@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Tra_Sua"
              mc:Ignorable="d" Width="720" Height="690">
     <Grid Background="#F4D8B5" Margin="0,0,0,38" HorizontalAlignment="Left" Width="746" >
-        <Button Margin="20,281,0,0" RenderTransformOrigin="0.353,-1.002" Height="58" Width="202" Click="Button_Click" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Arial Black" Cursor="" Background="#F2C193" BorderBrush="#F2C193" BorderThickness="3">
+        <Button Margin="20,281,0,0" RenderTransformOrigin="0.353,-1.002" Height="58" Width="202" Click="Button_Click" Tag="Trà Sữa Thái Xanh" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Arial Black" Cursor="" Background="#F2C193" BorderBrush="#F2C193" BorderThickness="3">
             <TextBlock TextAlignment="Justify" Width="174">
         <Run Text="Trà Sữa Thái Xanh"/>
         <LineBreak/>

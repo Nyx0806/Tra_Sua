@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\Ban.cs" />
+    <Compile Include="Model\ChiTietHoaDon.cs" />
+    <Compile Include="Model\HoaDon.cs" />
+    <Compile Include="Model\KhachHang.cs" />
+    <Compile Include="Model\NhanVien.cs" />
+    <Compile Include="Model\SanPham.cs" />
     <Compile Include="Sql\Connection.cs" />
     <Compile Include="DatMon.xaml.cs">
       <DependentUpon>DatMon.xaml</DependentUpon>
@@ -63,7 +69,7 @@
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
     <Compile Include="Sql\Modify.cs" />
-    <Compile Include="TaiKhoan.cs" />
+    <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="TrangChu.xaml.cs">
       <DependentUpon>TrangChu.xaml</DependentUpon>
     </Compile>
@@ -138,6 +144,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ảnh\Screenshot 2025-03-05 233720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Form\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

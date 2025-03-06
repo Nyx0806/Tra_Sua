@@ -12,7 +12,7 @@
         <Button Content="Bàn 2" HorizontalAlignment="Left" Margin="229,1,0,0" VerticalAlignment="Top" Height="134" Width="132" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
         <Button Content="Bàn 3" HorizontalAlignment="Left" Margin="412,1,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
         <Button Content="Bàn 4" HorizontalAlignment="Left" Margin="592,1,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
-        <Border HorizontalAlignment="Left" Margin="748,6,0,0" VerticalAlignment="Top" Height="615" Width="366" Background="Tan" BorderBrush="Black" BorderThickness="1">
+        <Border HorizontalAlignment="Left" Margin="762,6,0,0" VerticalAlignment="Top" Height="615" Width="366" Background="Tan" BorderBrush="Black" BorderThickness="1">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -35,17 +35,18 @@
 
                 <TextBlock Grid.Row="1" Text="Thông Tin Hóa Đơn" FontWeight="Bold" Margin="5"/>
 
-                <DataGrid Grid.Row="2" Margin="5,5,5,16" AutoGenerateColumns="False">
+                <DataGrid x:Name="dataGridMon" Grid.Row="2" Margin="5,5,5,16" AutoGenerateColumns="False">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Tên Sản Phẩm" Width="*"/>
-                        <DataGridTextColumn Header="Đơn Giá" Width="Auto"/>
-                        <DataGridTextColumn Header="SL" Width="Auto"/>
-                        <DataGridTextColumn Header="Tổng" Width="Auto"/>
+                        <DataGridTextColumn Header="Tên Sản Phẩm" Binding="{Binding TenSanPham}" Width="*"/>
+                        <DataGridTextColumn Header="Đơn Giá" Binding="{Binding Gia}" Width="Auto"/>
+                        <DataGridTextColumn Header="SL" Binding="{Binding SoLuong}" Width="Auto"/>
+                        <DataGridTextColumn Header="Tổng" Binding="{Binding ThanhTien}" Width="Auto"/>
                     </DataGrid.Columns>
                 </DataGrid>
 
                 <StackPanel Grid.Row="3" Margin="5" Orientation="Horizontal">
-                    <TextBlock Text="Tổng Hóa Đơn: " FontWeight="Bold"/>
+                    <TextBlock x:Name="lblTongTien" Text="Tổng tiền: 0 VNĐ" 
+                   FontSize="14" FontWeight="Bold"/>
                 </StackPanel>
             </Grid>
         </Border>
@@ -61,7 +62,7 @@
         <Button Content="Bàn 14" HorizontalAlignment="Left" Margin="229,481,0,0" VerticalAlignment="Top" Height="134" Width="132" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
         <Button Content="Bàn 15" HorizontalAlignment="Left" Margin="412,481,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
         <Button Content="Bàn 16" HorizontalAlignment="Left" Margin="592,481,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384"/>
-        <Button Content="In Đơn " HorizontalAlignment="Left" Margin="1013,585,0,0" VerticalAlignment="Top" Height="30" Width="92" FontWeight="Bold"/>
+        <Button Content="In Đơn " HorizontalAlignment="Left" Margin="1027,585,0,0" VerticalAlignment="Top" Height="30" Width="92" FontWeight="Bold"/>
         <Grid x:Name="dat" Margin="-18,0,422,0"/>
     </Grid>
 </UserControl>

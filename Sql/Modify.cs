@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tra_Sua.Model;
 
 namespace Tra_Sua
 {
@@ -29,6 +30,68 @@ namespace Tra_Sua
                 sqlConnection.Close();
             }
             return taiKhoans;
+        }
+        public List<SanPham> SanPhams(string query, params SqlParameter[] parameters)
+        {
+            List<SanPham> danhSach = new List<SanPham>();
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+
+                SqlCommand cmd = new SqlCommand(query, sqlConnection);
+                if (parameters != null)
+                {
+                    cmd.Parameters.AddRange(parameters);
+                }
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    SanPham sp = new SanPham()
+                    {
+                        MaSanPham = reader["masp"].ToString(),
+                        TenSanPham = reader["tensp"].ToString(),
+                        Gia = Convert.ToSingle(reader["gia"]),
+                        SoLuong = 1 // Mặc định số lượng = 1 khi lấy từ database
+                    };
+                    danhSach.Add(sp);
+                }
+                reader.Close();
+            }
+            return danhSach;
+        }
+
+
+
+
+
+        private void LuuMonVaoDatabase(SanPham mon)
+        {
+            string query = "INSERT INTO ChiTietHoaDon (maSanPham, soLuong, gia) VALUES (@maSanPham, @soLuong, @gia)";
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                SqlCommand cmd = new SqlCommand(query, sqlConnection);
+                cmd.Parameters.AddWithValue("@maSanPham", mon.MaSanPham);
+                cmd.Parameters.AddWithValue("@soLuong", mon.SoLuong);
+                cmd.Parameters.AddWithValue("@gia", mon.Gia);
+
+                sqlConnection.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+
+        public void ThucThi(string query)
+        {
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlCommand.ExecuteNonQuery(); // thực thi câu truy vấn
+
+                sqlConnection.Close();
+            }
         }
     }
 }
