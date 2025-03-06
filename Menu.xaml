@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Tra_Sua"
-             mc:Ignorable="d" Width="735" Height="690">
+             mc:Ignorable="d" Width="720" Height="690">
     <Grid Background="#F4D8B5" Margin="0,0,0,38" HorizontalAlignment="Left" Width="746" >
         <Button Margin="20,281,0,0" RenderTransformOrigin="0.353,-1.002" Height="58" Width="202" Click="Button_Click" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Arial Black" Cursor="" Background="#F2C193" BorderBrush="#F2C193" BorderThickness="3">
             <TextBlock TextAlignment="Justify" Width="174">
@@ -47,10 +47,81 @@
         <Border BorderBrush="#F2C193" BorderThickness="5" CornerRadius="0" Margin="473,367,71,97">
             <Image Source="/ảnh/Screenshot 2025-03-05 233720.png" Stretch="Fill"/>
         </Border>
-        <Button Content="←" HorizontalAlignment="Left" Margin="38,618,0,0" VerticalAlignment="Top" Width="32"/>
-        <Button Content="→" HorizontalAlignment="Left" Margin="98,618,0,0" VerticalAlignment="Top" Width="32" FontWeight="Bold"/>
-        <Button Content="Trà sữa" HorizontalAlignment="Left" Margin="79,27,0,0" VerticalAlignment="Top" Height="40" Width="143" Background="#F2C193" BorderBrush="#83705E" BorderThickness="3" FontSize="20" FontWeight="Bold"/>
-        <Button Content="Đồ ăn vặt" HorizontalAlignment="Left" Margin="274,27,0,0" VerticalAlignment="Top" Height="40" Width="144" Background="#F2C193" BorderBrush="#83705E" BorderThickness="3" FontSize="20" FontWeight="Bold"/>
+
+        <Button Content="←" HorizontalAlignment="Left" Margin="38,618,0,0" 
+        VerticalAlignment="Top" Width="47" Background="#CE9859" RenderTransformOrigin="0.5,0.5" Height="23" Click="Button_Click_3">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.672"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+                    CornerRadius="16">
+                        <!-- Bo tròn nút -->
+                        <ContentPresenter HorizontalAlignment="Center" 
+                                  VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Content="Trà sữa" HorizontalAlignment="Left" Margin="79,27,0,0"
+        VerticalAlignment="Top" Height="40" Width="143" Background="#F2C193"
+        BorderBrush="#83705E" BorderThickness="4" FontSize="20" FontWeight="Bold">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+                    BorderBrush="{TemplateBinding BorderBrush}" 
+                    BorderThickness="{TemplateBinding BorderThickness}" 
+                    CornerRadius="10">
+                        <!-- Bo góc -->
+                        <ContentPresenter HorizontalAlignment="Center" 
+                                  VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Content="→" HorizontalAlignment="Left" Margin="97,618,0,0" 
+            VerticalAlignment="Top" Width="47" Background="#CE9859" RenderTransformOrigin="0.5,0.5" Height="23" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.672"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" 
+                        CornerRadius="16">
+                        <!-- Bo tròn nút -->
+                        <ContentPresenter HorizontalAlignment="Center" 
+                            VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Content="Đồ ăn vặt" HorizontalAlignment="Left" Margin="260,27,0,0"
+            VerticalAlignment="Top" Height="40" Width="143" Background="#F2C193"
+            BorderBrush="#83705E" BorderThickness="4" FontSize="20" FontWeight="Bold">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" 
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="{TemplateBinding BorderThickness}" 
+                        CornerRadius="10">
+                        <!-- Bo góc -->
+                        <ContentPresenter HorizontalAlignment="Center" 
+                            VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
     </Grid>
 

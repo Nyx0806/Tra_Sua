@@ -16,17 +16,36 @@
                 <TextBlock Text="admin" FontWeight="Bold" HorizontalAlignment="Center"/>
             </StackPanel>
 
-            <Button DockPanel.Dock="Top" Content="🏠 Trang chủ" Height="70" FontSize="36" Background="Transparent" />
-            <Button DockPanel.Dock="Top" Content="🧾 Đặt Món" Height="70" FontSize="36" Background="Transparent" Click="Button_Click_1"/>
-            <Button DockPanel.Dock="Top" Content="📊 Doanh thu" Height="70" FontSize="36" Background="Transparent" />
-            <Button DockPanel.Dock="Top" Content="👥 Nhân viên" Height="70" FontSize="36" Background="Transparent"/>
-            <Button DockPanel.Dock="Top" Content="🍹 Cập nhật món" Height="70" FontSize="36" Background="Transparent"/>
+            <Button DockPanel.Dock="Top" Content="🏠 Trang chủ" Height="70" FontSize="36" Background="Transparent" BorderBrush="#CE9859" BorderThickness="3"/>
+            <Button DockPanel.Dock="Top" Content="🧾 Đặt Món" Height="70" FontSize="36" Background="Transparent" Click="Button_Click_1" BorderBrush="#CE9859" BorderThickness="3"/>
+            <Button DockPanel.Dock="Top" Content="📊 Doanh thu" Height="70" FontSize="36" Background="Transparent" BorderBrush="#CE9859" BorderThickness="3"/>
+            <Button DockPanel.Dock="Top" Content="👥 Nhân viên" Height="70" FontSize="36" Background="Transparent" BorderBrush="#CE9859" BorderThickness="3"/>
+            <Button DockPanel.Dock="Top" Content="🍹 Cập nhật món" Height="70" FontSize="36" Background="Transparent" BorderBrush="#CE9859" BorderThickness="3"/>
 
             <StackPanel VerticalAlignment="Bottom">
-                <Button Content="🚪 Đăng xuất" Height="70" FontSize="36" Background="Transparent" Click="Button_Click"/>
+                <Button Content="🚪 Đăng xuất" Height="70" FontSize="36" Background="Transparent" Click="Button_Click" BorderBrush="#CE9859" BorderThickness="3"/>
             </StackPanel>
         </DockPanel>
         <Grid x:Name="chinhchu" Margin="303,118,10,10"/>
+        <Border CornerRadius="20" 
+        BorderThickness="3" 
+        BorderBrush="#CE9859" 
+        Background="#F4DFC4" 
+        Padding="10"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top" Margin="412,23,0,0" Height="61" Width="742">
+            <TextBlock Text="Chất Lượng Luôn Luôn Đặt Lên Hàng Đầu!"
+               FontSize="28"
+               FontWeight="Bold"
+               FontStyle="Italic"
+               Foreground="#7C5A36"
+               TextAlignment="Center">
+                <TextBlock.Effect>
+                    <DropShadowEffect Color="Black" Opacity="0.4" BlurRadius="4"/>
+                </TextBlock.Effect>
+            </TextBlock>
+        </Border>
+
 
     </Grid>
 </Window>
