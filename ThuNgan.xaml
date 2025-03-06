@@ -247,7 +247,7 @@
 
             </Grid>
         </Border>
-        <Button Content="⋮" HorizontalAlignment="Left" Margin="652,0,0,0" VerticalAlignment="Center" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0"/>
+        <Button Content="⋮" HorizontalAlignment="Left" Margin="652,314,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0"/>
 
     </Grid>
 </UserControl>

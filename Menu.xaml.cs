@@ -29,6 +29,16 @@ namespace Tra_Sua
             InitializeComponent();
             this.datMon = datMon;
         }
+        private void Mo(Grid panel1, UserControl activeform, UserControl childform)
+        {
+            if (activeform != null)
+            {
+                panel1.Children.Remove(activeform); // Xóa giao diện cũ
+            }
+            activeform = childform; // Gán giao diện mới
+            panel1.Children.Add(childform); // Thêm vào Grid
+        }
+        UserControl activeform = null;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -70,6 +80,11 @@ namespace Tra_Sua
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            Mo(menu, activeform, new TraSua1());
         }
     }
 }

@@ -58,7 +58,11 @@ namespace Tra_Sua
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-             
+             Mo(chinhchu,activeform,new DoanhThu());
+        }
+        private void Button_Seting(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(" IM NIGGA!");
         }
     }
 }

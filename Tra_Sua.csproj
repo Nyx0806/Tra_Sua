@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DoanhThu.xaml.cs">
+      <DependentUpon>DoanhThu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model\Ban.cs" />
     <Compile Include="Model\ChiTietHoaDon.cs" />
     <Compile Include="Model\HoaDon.cs" />
@@ -88,7 +91,17 @@
     <Compile Include="TrangChuAnh.xaml.cs">
       <DependentUpon>TrangChuAnh.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TraSua1.xaml.cs">
+      <DependentUpon>TraSua1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TraSua2.xaml.cs">
+      <DependentUpon>TraSua2.xaml</DependentUpon>
+    </Compile>
     <Page Include="DatMon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DoanhThu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -129,6 +142,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TrangChuAnh.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TraSua1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TraSua2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -203,6 +224,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ảnh\52ccb1c99a7b35741fa8d182419252dd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ảnh\Screenshot 2025-03-06 222814.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ảnh\Screenshot 2025-03-06 222827.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

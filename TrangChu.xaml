@@ -10,7 +10,7 @@
 
     <Grid>
 
-        <Button Width="100" Height="100">
+        <Button Width="100" Height="100" Click="Button_Seting">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
@@ -37,7 +37,7 @@
                FontWeight="Bold"
                FontStyle="Italic"
                Foreground="#7C5A36"
-               TextAlignment="Center" Margin="0,0,0,-10">
+               TextAlignment="Center" Margin="0,-7,0,-3">
                 <TextBlock.Effect>
                     <DropShadowEffect Color="Black" Opacity="0.4" BlurRadius="4"/>
                 </TextBlock.Effect>
