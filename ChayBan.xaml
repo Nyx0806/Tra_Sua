@@ -52,8 +52,6 @@
                 </StackPanel>
 
                 <!-- Menu dấu ba chấm -->
-                <TextBlock Grid.Column="2" Text="⋮" FontSize="20" FontWeight="Bold"
-                   VerticalAlignment="Top" HorizontalAlignment="Left" Margin="13,114,0,0"/>
             </Grid>
         </Border>
         <Border Width="322" Height="164" Background="#F4CBA0" Padding="10"
@@ -101,8 +99,6 @@
                 </StackPanel>
 
                 <!-- Menu dấu ba chấm -->
-                <TextBlock Grid.Column="2" Text="⋮" FontSize="20" FontWeight="Bold"
-                    VerticalAlignment="Top" HorizontalAlignment="Left" Margin="13,114,0,0"/>
             </Grid>
         </Border>
         <Border Width="322" Height="164" Background="#F4CBA0" Padding="10"
@@ -150,8 +146,6 @@
                 </StackPanel>
 
                 <!-- Menu dấu ba chấm -->
-                <TextBlock Grid.Column="2" Text="⋮" FontSize="20" FontWeight="Bold"
-                    VerticalAlignment="Top" HorizontalAlignment="Left" Margin="13,114,0,0"/>
             </Grid>
         </Border>
         <Border Width="322" Height="164" Background="#F4CBA0" Padding="10"
@@ -199,8 +193,6 @@
                 </StackPanel>
 
                 <!-- Menu dấu ba chấm -->
-                <TextBlock Grid.Column="2" Text="⋮" FontSize="20" FontWeight="Bold"
-                    VerticalAlignment="Top" HorizontalAlignment="Left" Margin="13,114,0,0"/>
             </Grid>
         </Border>
         <Border Width="322" Height="164" Background="#F4CBA0" Padding="10"
@@ -248,8 +240,6 @@
                 </StackPanel>
 
                 <!-- Menu dấu ba chấm -->
-                <TextBlock Grid.Column="2" Text="⋮" FontSize="20" FontWeight="Bold"
-                    VerticalAlignment="Top" HorizontalAlignment="Left" Margin="13,114,0,0"/>
             </Grid>
         </Border>
         <Border Width="322" Height="164" Background="#F4CBA0" Padding="10"
@@ -297,8 +287,6 @@
                 </StackPanel>
 
                 <!-- Menu dấu ba chấm -->
-                <TextBlock Grid.Column="2" Text="⋮" FontSize="20" FontWeight="Bold"
-                    VerticalAlignment="Top" HorizontalAlignment="Left" Margin="13,114,0,0"/>
             </Grid>
         </Border>
         <Border Width="322" Height="164" Background="#F4CBA0" Padding="10"
@@ -346,10 +334,15 @@
                 </StackPanel>
 
                 <!-- Menu dấu ba chấm -->
-                <TextBlock Grid.Column="2" Text="⋮" FontSize="20" FontWeight="Bold"
-                    VerticalAlignment="Top" HorizontalAlignment="Left" Margin="13,114,0,0"/>
             </Grid>
         </Border>
+        <Button Content="⋮" HorizontalAlignment="Left" Margin="1010,314,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0"/>
+        <Button Content="⋮" HorizontalAlignment="Left" Margin="1010,134,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0"/>
+        <Button Content="⋮" HorizontalAlignment="Left" Margin="652,314,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0"/>
+        <Button Content="⋮" HorizontalAlignment="Left" Margin="652,134,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0"/>
+        <Button Content="⋮" HorizontalAlignment="Left" Margin="303,314,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0"/>
+        <Button Content="⋮" HorizontalAlignment="Left" Margin="303,134,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0"/>
+        <Button Content="⋮" HorizontalAlignment="Left" Margin="303,502,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0"/>
 
     </Grid>
 </UserControl>

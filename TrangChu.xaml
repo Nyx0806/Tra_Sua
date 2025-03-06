@@ -33,11 +33,11 @@
         HorizontalAlignment="Left"
         VerticalAlignment="Top" Margin="412,23,0,0" Height="61" Width="742">
             <TextBlock Text="Chất Lượng Luôn Luôn Đặt Lên Hàng Đầu!"
-               FontSize="28"
+               FontSize="32"
                FontWeight="Bold"
                FontStyle="Italic"
                Foreground="#7C5A36"
-               TextAlignment="Center">
+               TextAlignment="Center" Margin="0,0,0,-10">
                 <TextBlock.Effect>
                     <DropShadowEffect Color="Black" Opacity="0.4" BlurRadius="4"/>
                 </TextBlock.Effect>
