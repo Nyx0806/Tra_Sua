@@ -21,39 +21,55 @@
         <!-- Khu vực hóa đơn -->
         <Grid Grid.Column="1" Margin="5">
         <Border  Margin="10" Background="#E8C097" CornerRadius="10">
-            <StackPanel Margin="10">
-                <TextBlock Text="Thông Tin Khách Hàng" FontWeight="Bold" />
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80" />
+                        <RowDefinition />
+                        <RowDefinition Height="40" />
+                    </Grid.RowDefinitions>
+                    <StackPanel>
 
-                <!-- Thay PlaceholderText bằng Hint Text -->
-                <Grid>
-                    <TextBox x:Name="txtTenKhach"/>
-                    <TextBlock Text="Tên Khách Hàng" Foreground="Gray" 
-                               VerticalAlignment="Center" Margin="5,0,0,0"
-                               IsHitTestVisible="False" />
+                        <TextBlock  Text="Thông Tin Khách Hàng" FontWeight="Bold" />
+
+                        <!-- Thay PlaceholderText bằng Hint Text -->
+                        <Grid >
+                            <TextBox x:Name="txtTenKhach"/>
+                            <TextBlock Text="Tên Khách Hàng" Foreground="Gray" 
+                                   VerticalAlignment="Center" Margin="5,0,0,0"
+                                   IsHitTestVisible="False" />
+                        </Grid>
+
+                        <Grid>
+                            <TextBox x:Name="txtSDT"/>
+                            <TextBlock Text="Số Điện Thoại" Foreground="Gray" 
+                                   VerticalAlignment="Center" Margin="5,0,0,0"
+                                   IsHitTestVisible="False" />
+                        </Grid>
+
+                        <TextBlock Text="Thông Tin Hóa Đơn" FontWeight="Bold" Margin="5 10 0 5" />
+                    </StackPanel>
+                    
+                        <Grid Grid.Row="1">
+                            <DataGrid  x:Name="dataGridMon" AutoGenerateColumns="False" HeadersVisibility="Column"
+          Background="White">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Tên Sản Phẩm" Binding="{Binding TenSanPham}" Width="*" />
+                                <DataGridTextColumn Header="Đơn Giá" Binding="{Binding Gia}" Width="80" />
+                                <DataGridTextColumn Header="SL" Binding="{Binding SoLuong}" Width="50" />
+                                <DataGridTextColumn Header="Tổng" Binding="{Binding ThanhTien}" Width="80" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                    <Grid Grid.Row="2">
+
+                        <TextBlock HorizontalAlignment="Left" x:Name="lblTongTien" Text="Tổng tiền: 0 VNĐ" FontWeight="Bold" Margin="5" />
+
+                        <Button HorizontalAlignment="Right" Content="In Đơn" Click="InDon_Click" Width="100" Height="30"/>
+
+                    </Grid>
+
                 </Grid>
-
-                <Grid>
-                    <TextBox x:Name="txtSDT"/>
-                    <TextBlock Text="Số Điện Thoại" Foreground="Gray" 
-                               VerticalAlignment="Center" Margin="5,0,0,0"
-                               IsHitTestVisible="False" />
-                </Grid>
-
-                <TextBlock Text="Thông Tin Hóa Đơn" FontWeight="Bold" Margin="5 10 0 5" />
-                <DataGrid x:Name="dataGridMon" AutoGenerateColumns="False" HeadersVisibility="Column"
-                          Background="White" Height="200">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Tên Sản Phẩm" Binding="{Binding TenSanPham}" Width="*" />
-                        <DataGridTextColumn Header="Đơn Giá" Binding="{Binding Gia}" Width="80" />
-                        <DataGridTextColumn Header="SL" Binding="{Binding SoLuong}" Width="50" />
-                        <DataGridTextColumn Header="Tổng" Binding="{Binding ThanhTien}" Width="80" />
-                    </DataGrid.Columns>
-                </DataGrid>
-
-                <TextBlock x:Name="lblTongTien" Text="Tổng tiền: 0 VNĐ" FontWeight="Bold" Margin="5" />
-                <Button Content="In Đơn" Click="InDon_Click" />
-            </StackPanel>
-        </Border>
+            </Border>
         </Grid>
     </Grid>
 </UserControl>
