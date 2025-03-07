@@ -24,7 +24,7 @@ namespace Tra_Sua
 
         private void TaiDanhSachMon()
         {
-            string query = "SELECT masp, tensp, gia FROM SanPham";
+            string query = "SELECT masp, tensp, gia FROM SanPham where loai = 'Trà sữa' ";
             List<SanPham> danhSachSanPham = new Modify().SanPhams(query);
 
             // Xóa danh sách cũ
