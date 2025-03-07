@@ -121,5 +121,20 @@ namespace Tra_Sua
         {
             Mo(gridMenu, activeform, new MenuUS(this));
         }
+        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (sender == txtTenKhach) lblTenKhach.Visibility = Visibility.Collapsed;
+            if (sender == txtSDT) lblSDT.Visibility = Visibility.Collapsed;
+        }
+
+        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (sender == txtTenKhach && string.IsNullOrWhiteSpace(txtTenKhach.Text))
+                lblTenKhach.Visibility = Visibility.Visible;
+
+            if (sender == txtSDT && string.IsNullOrWhiteSpace(txtSDT.Text))
+                lblSDT.Visibility = Visibility.Visible;
+        }
+
     }
 }

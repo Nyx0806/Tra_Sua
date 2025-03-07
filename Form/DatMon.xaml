@@ -11,13 +11,11 @@
             <ColumnDefinition Width="3*" />
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
-
         <!-- Danh sách bàn -->
         <Grid x:Name="gridMenu">
             <UniformGrid Columns="4" Rows="4" Grid.Column="0" Margin="10" x:Name="gridBanAn">
             </UniformGrid >
         </Grid>
-        
         <!-- Khu vực hóa đơn -->
         <Grid Grid.Column="1" Margin="5">
         <Border  Margin="10" Background="#E8C097" CornerRadius="10">
@@ -28,24 +26,20 @@
                         <RowDefinition Height="40" />
                     </Grid.RowDefinitions>
                     <StackPanel>
-
                         <TextBlock  Text="Thông Tin Khách Hàng" FontWeight="Bold" />
-
                         <!-- Thay PlaceholderText bằng Hint Text -->
                         <Grid >
-                            <TextBox x:Name="txtTenKhach"/>
-                            <TextBlock Text="Tên Khách Hàng" Foreground="Gray" 
-                                   VerticalAlignment="Center" Margin="5,0,0,0"
-                                   IsHitTestVisible="False" />
+                            <TextBox x:Name="txtTenKhach" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+                            <TextBlock x:Name="lblTenKhach" Text="Tên Khách Hàng" Foreground="Gray"
+                                        VerticalAlignment="Center" Margin="5,0,0,0"
+                                        IsHitTestVisible="False"/>
                         </Grid>
-
                         <Grid>
-                            <TextBox x:Name="txtSDT"/>
-                            <TextBlock Text="Số Điện Thoại" Foreground="Gray" 
+                            <TextBox x:Name="txtSDT" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+                            <TextBlock x:Name="lblSDT" Text="Số Điện Thoại" Foreground="Gray" 
                                    VerticalAlignment="Center" Margin="5,0,0,0"
                                    IsHitTestVisible="False" />
                         </Grid>
-
                         <TextBlock Text="Thông Tin Hóa Đơn" FontWeight="Bold" Margin="5 10 0 5" />
                     </StackPanel>
                     
@@ -61,13 +55,9 @@
                         </DataGrid>
                     </Grid>
                     <Grid Grid.Row="2">
-
                         <TextBlock HorizontalAlignment="Left" x:Name="lblTongTien" Text="Tổng tiền: 0 VNĐ" FontWeight="Bold" Margin="5" />
-
                         <Button HorizontalAlignment="Right" Content="In Đơn" Click="InDon_Click" Width="100" Height="30"/>
-
                     </Grid>
-
                 </Grid>
             </Border>
         </Grid>
