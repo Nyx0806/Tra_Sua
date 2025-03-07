@@ -1,41 +1,80 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
+using System.Windows.Controls.Primitives;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Tra_Sua.Model;
 
 namespace Tra_Sua
 {
-    /// <summary>
-    /// Interaction logic for DatMon.xaml
-    /// </summary>
     public partial class DatMon : UserControl
     {
-        public ObservableCollection<SanPham> DanhSachMon { get; set; } = new ObservableCollection<SanPham>();
+        public ObservableCollection<SanPham> DanhSachMon { get; set; }
+        private Dictionary<Button, ObservableCollection<SanPham>> banHoaDon = new Dictionary<Button, ObservableCollection<SanPham>>();
+        private Button banDangChon = null; // Lưu bàn đang chọn
 
         public DatMon()
         {
             InitializeComponent();
-            dataGridMon.ItemsSource = DanhSachMon; // Đảm bảo DataGrid nhận danh sách
+            DanhSachMon = new ObservableCollection<SanPham>();
+            dataGridMon.ItemsSource = DanhSachMon;
+            KhoiTaoBanAn();
         }
+
+        private void KhoiTaoBanAn()
+        {
+            for (int i = 1; i <= 16; i++)
+            {
+                Button btnBan = new Button
+                {
+                    Content = $"Bàn {i}",
+                    Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#D49A6A")),
+                    FontSize = 16,
+                    FontWeight = FontWeights.Bold,
+                    Width = 100,
+                    Height = 80,
+                    Margin = new Thickness(5)
+                };
+
+                btnBan.Click += (s, e) => ChonBan(btnBan);
+                gridBanAn.Children.Add(btnBan);
+                banHoaDon[btnBan] = new ObservableCollection<SanPham>(); // Mỗi bàn có 1 danh sách hóa đơn riêng
+            }
+        }
+
+        private void ChonBan(Button btnBan)
+        {
+            if (banDangChon != null)
+            {
+                banDangChon.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#D49A6A"));
+            }
+
+            // Cập nhật bàn đang chọn và đổi màu
+            banDangChon = btnBan;
+            banDangChon.Background = Brushes.LightGreen;
+
+            // Gán danh sách món ăn của bàn vào DataGrid
+            DanhSachMon.Clear();
+            foreach (var item in banHoaDon[btnBan])
+            {
+                DanhSachMon.Add(item);
+            }
+            CapNhatTongTien();
+
+            // **Mở form menu**
+            MoFormMenu();
+        }
+
 
         public void ThemMon(SanPham mon)
         {
-            if (mon != null)
+            if (mon != null && banDangChon != null)
             {
-                var monDaTonTai = DanhSachMon.FirstOrDefault(x => x.MaSanPham == mon.MaSanPham);
+                var danhSachCuaBan = banHoaDon[banDangChon];
 
+                var monDaTonTai = danhSachCuaBan.FirstOrDefault(x => x.MaSanPham == mon.MaSanPham);
                 if (monDaTonTai != null)
                 {
                     monDaTonTai.SoLuong++;
@@ -43,22 +82,30 @@ namespace Tra_Sua
                 else
                 {
                     mon.SoLuong = 1;
-                    DanhSachMon.Add(mon);
+                    danhSachCuaBan.Add(mon);
                 }
-                dataGridMon.ItemsSource = null; // Reset binding
-                dataGridMon.ItemsSource = DanhSachMon; // Gán lại danh sách
-                dataGridMon.Items.Refresh();
 
+                // Cập nhật lại danh sách hiển thị
+                DanhSachMon.Clear();
+                foreach (var item in danhSachCuaBan)
+                {
+                    DanhSachMon.Add(item);
+                }
+
+                dataGridMon.Items.Refresh();
                 CapNhatTongTien();
             }
         }
 
-
-
         private void CapNhatTongTien()
         {
-            float tongTien = DanhSachMon.Sum(mon => mon.ThanhTien); // Tính tổng tất cả món
+            float tongTien = DanhSachMon.Sum(mon => mon.ThanhTien);
             lblTongTien.Text = $"Tổng tiền: {tongTien:N0} VNĐ";
+        }
+
+        private void InDon_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("In hóa đơn thành công!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
         }
         private void Mo(Grid panel1, UserControl activeform, UserControl childform)
         {
@@ -70,9 +117,9 @@ namespace Tra_Sua
             panel1.Children.Add(childform); // Thêm vào Grid
         }
         UserControl activeform = null;
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void MoFormMenu()
         {
-            Mo(dat, activeform, new Menu(this));
+            Mo(gridMenu, activeform, new MenuUS(this));
         }
     }
 }

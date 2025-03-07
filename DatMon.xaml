@@ -1,68 +1,59 @@
 ﻿<UserControl x:Class="Tra_Sua.DatMon"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Tra_Sua"
-             mc:Ignorable="d" 
-             d:DesignHeight="700" d:DesignWidth="1129" Height="672">
-    <Grid Background="#F4D8B5" Margin="0,0,0,10" >
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    mc:Ignorable="d"
+    d:DesignHeight="400" d:DesignWidth="800">
 
-        <Button Content="Bàn 1" HorizontalAlignment="Left" Margin="47,1,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384" Click="Button_Click"/>
-        <Button Content="Bàn 2" HorizontalAlignment="Left" Margin="229,1,0,0" VerticalAlignment="Top" Height="134" Width="132" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384" Click="Button_Click"/>
-        <Button Content="Bàn 3" HorizontalAlignment="Left" Margin="412,1,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384" Click="Button_Click"/>
-        <Button Content="Bàn 4" HorizontalAlignment="Left" Margin="592,1,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384" Click="Button_Click"/>
-        <Border HorizontalAlignment="Left" Margin="762,6,0,0" VerticalAlignment="Top" Height="615" Width="366" Background="Tan" BorderBrush="Black" BorderThickness="1">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
+    <Grid Background="#F4D8B5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
 
-                <StackPanel Grid.Row="0" Margin="5">
-                    <TextBlock Text="Thông Tin Khách Hàng" FontWeight="Bold"/>
-                    <StackPanel Orientation="Horizontal" Margin="5">
-                        <TextBlock Text="Tên Khách Hàng: " VerticalAlignment="Center"/>
-                        <TextBox Width="150"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="5">
-                        <TextBlock VerticalAlignment="Center"><Run Text="Số Điện Thoại:    "/><Run Text=" "/></TextBlock>
-                        <TextBox Width="153"/>
-                    </StackPanel>
-                </StackPanel>
+        <!-- Danh sách bàn -->
+        <Grid x:Name="gridMenu">
+            <UniformGrid Columns="4" Rows="4" Grid.Column="0" Margin="10" x:Name="gridBanAn">
+            </UniformGrid >
+        </Grid>
+        
+        <!-- Khu vực hóa đơn -->
+        <Grid Grid.Column="1" Margin="5">
+        <Border  Margin="10" Background="#E8C097" CornerRadius="10">
+            <StackPanel Margin="10">
+                <TextBlock Text="Thông Tin Khách Hàng" FontWeight="Bold" />
 
-                <TextBlock Grid.Row="1" Text="Thông Tin Hóa Đơn" FontWeight="Bold" Margin="5"/>
+                <!-- Thay PlaceholderText bằng Hint Text -->
+                <Grid>
+                    <TextBox x:Name="txtTenKhach"/>
+                    <TextBlock Text="Tên Khách Hàng" Foreground="Gray" 
+                               VerticalAlignment="Center" Margin="5,0,0,0"
+                               IsHitTestVisible="False" />
+                </Grid>
 
-                <DataGrid x:Name="dataGridMon" Grid.Row="2" Margin="5,5,5,16" AutoGenerateColumns="False">
+                <Grid>
+                    <TextBox x:Name="txtSDT"/>
+                    <TextBlock Text="Số Điện Thoại" Foreground="Gray" 
+                               VerticalAlignment="Center" Margin="5,0,0,0"
+                               IsHitTestVisible="False" />
+                </Grid>
+
+                <TextBlock Text="Thông Tin Hóa Đơn" FontWeight="Bold" Margin="5 10 0 5" />
+                <DataGrid x:Name="dataGridMon" AutoGenerateColumns="False" HeadersVisibility="Column"
+                          Background="White" Height="200">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Tên Sản Phẩm" Binding="{Binding TenSanPham}" Width="*"/>
-                        <DataGridTextColumn Header="Đơn Giá" Binding="{Binding Gia}" Width="Auto"/>
-                        <DataGridTextColumn Header="SL" Binding="{Binding SoLuong}" Width="Auto"/>
-                        <DataGridTextColumn Header="Tổng" Binding="{Binding ThanhTien}" Width="Auto"/>
+                        <DataGridTextColumn Header="Tên Sản Phẩm" Binding="{Binding TenSanPham}" Width="*" />
+                        <DataGridTextColumn Header="Đơn Giá" Binding="{Binding Gia}" Width="80" />
+                        <DataGridTextColumn Header="SL" Binding="{Binding SoLuong}" Width="50" />
+                        <DataGridTextColumn Header="Tổng" Binding="{Binding ThanhTien}" Width="80" />
                     </DataGrid.Columns>
                 </DataGrid>
 
-                <StackPanel Grid.Row="3" Margin="5" Orientation="Horizontal">
-                    <TextBlock x:Name="lblTongTien" Text="Tổng tiền: 0 VNĐ" 
-                   FontSize="14" FontWeight="Bold"/>
-                </StackPanel>
-            </Grid>
+                <TextBlock x:Name="lblTongTien" Text="Tổng tiền: 0 VNĐ" FontWeight="Bold" Margin="5" />
+                <Button Content="In Đơn" Click="InDon_Click" />
+            </StackPanel>
         </Border>
-        <Button Content="Bàn 5" HorizontalAlignment="Left" Margin="47,166,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384" Click="Button_Click"/>
-        <Button Content="Bàn 6" HorizontalAlignment="Left" Margin="229,166,0,0" VerticalAlignment="Top" Height="134" Width="132" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384" Click="Button_Click"/>
-        <Button Content="Bàn 7" HorizontalAlignment="Left" Margin="412,166,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384" Click="Button_Click"/>
-        <Button Content="Bàn 8" HorizontalAlignment="Left" Margin="592,166,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384" Click="Button_Click"/>
-        <Button Content="Bàn 9" HorizontalAlignment="Left" Margin="47,322,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384" Click="Button_Click"/>
-        <Button Content="Bàn 10" HorizontalAlignment="Left" Margin="229,322,0,0" VerticalAlignment="Top" Height="134" Width="132" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384" Click="Button_Click"/>
-        <Button Content="Bàn 11" HorizontalAlignment="Left" Margin="412,322,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384" Click="Button_Click"/>
-        <Button Content="Bàn 12" HorizontalAlignment="Left" Margin="592,322,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384" Click="Button_Click"/>
-        <Button Content="Bàn 13" HorizontalAlignment="Left" Margin="47,481,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384" Click="Button_Click"/>
-        <Button Content="Bàn 14" HorizontalAlignment="Left" Margin="229,481,0,0" VerticalAlignment="Top" Height="134" Width="132" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384" Click="Button_Click"/>
-        <Button Content="Bàn 15" HorizontalAlignment="Left" Margin="412,481,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384" Click="Button_Click"/>
-        <Button Content="Bàn 16" HorizontalAlignment="Left" Margin="592,481,0,0" VerticalAlignment="Top" Height="134" Width="133" RenderTransformOrigin="0.021,0.29" FontSize="30" FontWeight="Bold" Background="#FFDEB384" Click="Button_Click"/>
-        <Button Content="In Đơn " HorizontalAlignment="Left" Margin="1027,585,0,0" VerticalAlignment="Top" Height="30" Width="92" FontWeight="Bold"/>
-        <Grid x:Name="dat" Margin="-18,0,422,0"/>
+        </Grid>
     </Grid>
 </UserControl>

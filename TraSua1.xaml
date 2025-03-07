@@ -1,96 +1,21 @@
 ﻿<UserControl x:Class="Tra_Sua.TraSua1"
               xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Tra_Sua"
-             mc:Ignorable="d" Width="720" Height="595">
-    <Grid Background="#F4D8B5" Margin="0,-1,0,39" HorizontalAlignment="Left" Width="746" >
-        
-        <Button Margin="20,186,0,0" RenderTransformOrigin="0.353,-1.002" Height="58" Width="202" Tag="Trà Sữa Thái Xanh" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Arial Black" Cursor="" Background="#F2C193" BorderBrush="#F2C193" BorderThickness="3">
-            <TextBlock TextAlignment="Justify" Width="174">
-        <Run Text="Trà Sữa Thái Xanh"/>
-        <LineBreak/>
-        <Run Text="Giá: " />
-        <Run Text="50.000đ" Foreground="Red"/>
-            </TextBlock>
-        </Button>
-        <Border BorderBrush="#F2C193" BorderThickness="5" CornerRadius="0" Margin="20,10,524,371">
-            <Image Source="/ảnh/Screenshot 2025-03-05 230209.png" Stretch="Fill"/>
-        </Border>
-        <Button Margin="245,186,0,0" RenderTransformOrigin="0.353,-1.002" Height="58" Width="202"  FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Arial Black" Cursor="" Background="#F2C193" BorderBrush="#F2C193">
-            <TextBlock TextAlignment="Justify" Width="174"><Run Text="Trà Sữa Kem Trứng"/><LineBreak/><Run Text="Giá: " /><Run Text=" "/><Run Text="55.000đ" Foreground="Red"/></TextBlock>
-        </Button>
-        <Button Margin="473,186,0,0" RenderTransformOrigin="0.353,-1.002" Height="58" Width="202"  FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Arial Black" Cursor="" Background="#F2C193" BorderBrush="#F2C193">
-            <TextBlock TextAlignment="Justify" Width="174"><Run Text="Hồng Trà"/><LineBreak/><Run Text="Giá: " /><Run Text=" "/><Run Text="45.000đ" Foreground="Red"/></TextBlock>
-        </Button>
-        <Button Margin="20,460,0,0" RenderTransformOrigin="0.353,-1.002" Height="59" Width="202"  FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Arial Black" Cursor="" Background="#F2C193" BorderBrush="#F2C193">
-            <TextBlock TextAlignment="Justify" Width="174"><Run Text="Trà Sữa Truyèn Thống"/><LineBreak/><Run Text="Giá: " /><Run Text=" "/><Run Text="45.000đ" Foreground="Red"/></TextBlock>
-        </Button>
-        <Button Margin="245,460,0,0" RenderTransformOrigin="0.353,-1.002" Height="58" Width="202" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Arial Black" Cursor="" Background="#F2C193" BorderBrush="#F2C193">
-            <TextBlock TextAlignment="Justify" Width="174"><Run Text="Trà Sữa SOCOLA"/><LineBreak/><Run Text="Giá: " /><Run Text=" "/><Run Text="55.000đ" Foreground="Red"/></TextBlock>
-        </Button>
-        <Button Margin="473,460,0,0" RenderTransformOrigin="0.353,-1.002" Height="58" Width="202"  FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Arial Black" Cursor="" Background="#F2C193" BorderBrush="#F2C193">
-            <TextBlock TextAlignment="Justify" Width="174"><Run Text="Trà Sữa Kem Flan"/><LineBreak/><Run Text="Giá: " /><Run Text=" "/><Run Text="60.000đ" Foreground="Red"/></TextBlock>
-        </Button>
-        <Border BorderBrush="#F2C193" BorderThickness="5" CornerRadius="0" Margin="245,10,299,371">
-            <Image Source="/ảnh/Screenshot 2025-03-05 232036.png" Stretch="Fill"/>
-        </Border>
-        <Border BorderBrush="#F2C193" BorderThickness="5" CornerRadius="0" Margin="473,10,71,371">
-            <Image Source="/ảnh/Screenshot 2025-03-05 232815.png" Stretch="Fill"/>
-        </Border>
-        <Border BorderBrush="#F2C193" BorderThickness="5" CornerRadius="0" Margin="20,279,524,97">
-            <Image Source="/ảnh/Screenshot 2025-03-05 233432.png" Stretch="Fill"/>
-        </Border>
-        <Border BorderBrush="#F2C193" BorderThickness="5" CornerRadius="0" Margin="245,279,299,97">
-            <Image Source="/ảnh/Screenshot 2025-03-05 233637.png" Stretch="Fill"/>
-        </Border>
-        <Border BorderBrush="#F2C193" BorderThickness="5" CornerRadius="0" Margin="473,279,71,97">
-            <Image Source="/ảnh/Screenshot 2025-03-05 233720.png" Stretch="Fill"/>
-        </Border>
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+              xmlns:local="clr-namespace:Tra_Sua"
+              mc:Ignorable="d" Width="720" Height="595">
+    <Grid Background="#F4D8B5">
 
-        <Button Content="←" HorizontalAlignment="Left" Margin="38,529,0,0" 
-        VerticalAlignment="Top" Width="47" Background="#CE9859" RenderTransformOrigin="0.5,0.5" Height="23" >
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.672"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Border Background="{TemplateBinding Background}" 
-                    CornerRadius="16">
-                        <!-- Bo tròn nút -->
-                        <ContentPresenter HorizontalAlignment="Center" 
-                                  VerticalAlignment="Center"/>
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
-        <Button Content="→" HorizontalAlignment="Left" Margin="97,528,0,0" Width="47" Background="#CE9859" RenderTransformOrigin="0.5,0.5" Height="23" VerticalAlignment="Top" Click="Button_Click" >
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.672"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-            <Button.Template>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Background="{TemplateBinding Background}" 
-                        CornerRadius="16">
-                        <!-- Bo tròn nút -->
-                        <ContentPresenter HorizontalAlignment="Center" 
-                            VerticalAlignment="Center"/>
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
+        <!-- 🔹 Tiêu đề -->
+        <TextBlock Text="Danh Sách Trà Sữa" FontSize="20" FontWeight="Bold" 
+                   HorizontalAlignment="Center" Margin="0,10,0,0"/>
+
+        <!-- 🔹 Danh sách món ăn (Sử dụng ScrollViewer để cuộn ngang nếu danh sách dài) -->
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <WrapPanel x:Name="panelMon" />
+        </ScrollViewer>
+
 
     </Grid>
-
 </UserControl>

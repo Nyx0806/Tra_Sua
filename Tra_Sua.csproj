@@ -58,6 +58,9 @@
     <Compile Include="DoanhThu.xaml.cs">
       <DependentUpon>DoanhThu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MenuUS.xaml.cs">
+      <DependentUpon>MenuUS.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model\Ban.cs" />
     <Compile Include="Model\ChiTietHoaDon.cs" />
     <Compile Include="Model\HoaDon.cs" />
@@ -121,6 +124,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MenuUS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="NhanVien.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -181,55 +188,57 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ảnh\Screenshot 2025-03-05 230209.png" />
+    <Resource Include="Images\Screenshot 2025-03-03 185044.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ảnh\Screenshot 2025-03-03 185044.png" />
+    <Resource Include="Images\Screenshot 2025-03-05 232815.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ảnh\Screenshot 2025-03-05 232036.png" />
+    <Resource Include="Images\Screenshot 2025-03-05 233432.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ảnh\Screenshot 2025-03-05 232815.png" />
+    <Resource Include="Images\Screenshot 2025-03-05 233637.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ảnh\Screenshot 2025-03-05 233432.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="ảnh\Screenshot 2025-03-05 233637.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="ảnh\Screenshot 2025-03-05 233720.png" />
+    <Resource Include="Images\Screenshot 2025-03-05 233720.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Form\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ảnh\Screenshot 2025-03-06 135948.png" />
+    <Resource Include="Images\Screenshot 2025-03-06 135948.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ảnh\Screenshot 2025-03-06 140144.png" />
+    <Resource Include="Images\Screenshot 2025-03-06 140144.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ảnh\Screenshot 2025-03-06 140306.png" />
+    <Resource Include="Images\Screenshot 2025-03-06 140306.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ảnh\Screenshot 2025-03-06 140637.png" />
+    <Resource Include="Images\Screenshot 2025-03-06 140637.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ảnh\Screenshot 2025-03-06 140651.png" />
+    <Resource Include="Images\Screenshot 2025-03-06 140651.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ảnh\Screenshot 2025-03-06 140713.png" />
+    <Resource Include="Images\Screenshot 2025-03-06 140713.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ảnh\52ccb1c99a7b35741fa8d182419252dd.jpg" />
+    <Resource Include="Images\Screenshot 2025-03-06 222814.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ảnh\Screenshot 2025-03-06 222814.png" />
+    <Resource Include="Images\Screenshot 2025-03-06 222827.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ảnh\Screenshot 2025-03-06 222827.png" />
+    <Resource Include="Images\TS001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TS002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\default.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
