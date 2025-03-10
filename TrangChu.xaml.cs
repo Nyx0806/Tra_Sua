@@ -33,6 +33,14 @@ namespace Tra_Sua
             panel1.Children.Add(childform); // Thêm vào Grid
         }
         UserControl activeform = null;
+        private void ResetButtonColors()
+        {
+            Color defaultColor = Color.FromRgb(242, 193, 147); // Màu ban đầu #F2C193
+            btnDatMon.Background = new SolidColorBrush(defaultColor);
+            btnDoanhThu.Background = new SolidColorBrush(defaultColor);
+            btnNhanVien.Background = new SolidColorBrush(defaultColor);
+            btnCapNhatMon.Background = new SolidColorBrush(defaultColor);
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -41,29 +49,37 @@ namespace Tra_Sua
             mainWindow.Show();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click_DatMon(object sender, RoutedEventArgs e)
         {
+            ResetButtonColors();
+            btnDatMon.Background = new SolidColorBrush(Color.FromRgb(206, 152, 89)); // Đổi màu khi bấm
             Mo(chinhchu, activeform, new DatMon());
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            Mo(chinhchu,activeform, new TrangChuAnh()); 
-        }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private void Button_Click_NhanVien(object sender, RoutedEventArgs e)
         {
+            ResetButtonColors();
+            btnNhanVien.Background = new SolidColorBrush(Color.FromRgb(206, 152, 89)); // Đổi màu khi bấm
             Mo(chinhchu, activeform, new NhanVien());
         }
 
-        private void Button_Click_4(object sender, RoutedEventArgs e)
+        private void Button_Click_DoanhThu(object sender, RoutedEventArgs e)
         {
-             Mo(chinhchu,activeform,new DoanhThu());
+            ResetButtonColors();
+            btnDoanhThu.Background = new SolidColorBrush(Color.FromRgb(206, 152, 89)); // Đổi màu khi bấm
+            Mo(chinhchu,activeform,new DoanhThu());
         }
         private void Button_Seting(object sender, RoutedEventArgs e)
         {
             Seting seting = new Seting();
             seting.Show();
+        }
+
+        private void Button_Click_CapNhatMon(object sender, RoutedEventArgs e)
+        {
+            ResetButtonColors();
+            btnCapNhatMon.Background = new SolidColorBrush(Color.FromRgb(206, 152, 89)); // Đổi màu khi bấm
         }
     }
 }
