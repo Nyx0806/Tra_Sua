@@ -78,7 +78,7 @@ namespace Tra_Sua
                         btnBan.Click += (s, e) => ChonBan(btnBan);
                         gridBanAn.Children.Add(btnBan);
 
-                        // Khởi tạo danh sách món của bàn
+                        // Khởi tạo danh sách món của bàn nếu chưa có
                         if (!banHoaDon.ContainsKey(soBan))
                             banHoaDon[soBan] = new ObservableCollection<SanPham>();
 
@@ -105,8 +105,13 @@ namespace Tra_Sua
             // Cập nhật bàn đang chọn
             banDangChon = btnBan;
 
-            // Hiển thị danh sách món ăn của bàn vào DataGrid
+            // Đảm bảo lấy danh sách món cũ của bàn
+            if (!banHoaDon.ContainsKey(soBan))
+            {
+                banHoaDon[soBan] = new ObservableCollection<SanPham>();
+            }
             DanhSachMon = banHoaDon[soBan];
+
             dataGridMon.ItemsSource = DanhSachMon;
             dataGridMon.Items.Refresh();
 
@@ -118,9 +123,10 @@ namespace Tra_Sua
 
         public void QuayLaiManHinhChonBan()
         {
-            // Xóa tạm danh sách món hiển thị trong DataGrid nhưng không mất dữ liệu món
-            DanhSachMon.Clear();
+            // 🔹 KHÔNG XÓA `banHoaDon`, chỉ reset hiển thị của `DataGrid`
+            dataGridMon.ItemsSource = null;
             dataGridMon.Items.Refresh();
+
         }
 
         public void ThemMon(SanPham mon)
@@ -146,11 +152,13 @@ namespace Tra_Sua
                 CapNhatTongTien();
             }
         }
+
         private void CapNhatTongTien()
         {
             float tongTien = DanhSachMon.Sum(mon => mon.ThanhTien);
             lblTongTien.Text = $"Tổng tiền: {tongTien:N0} VNĐ";
         }
+
         private void InDon_Click(object sender, RoutedEventArgs e)
         {
             if (banDangChon != null)
@@ -168,6 +176,10 @@ namespace Tra_Sua
 
                 // Xóa danh sách món của bàn in đơn
                 banHoaDon[soBan].Clear();
+
+                // Reset hiển thị của `DataGrid`
+                dataGridMon.ItemsSource = null;
+                dataGridMon.Items.Refresh();
 
                 MessageBox.Show($"In hóa đơn cho bàn {soBan} thành công!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
 
