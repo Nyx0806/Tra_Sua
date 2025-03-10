@@ -24,7 +24,7 @@ namespace Tra_Sua
 
         private void TaiDanhSachMon()
         {
-            string query = "SELECT masp, tensp, gia FROM SanPham where loai = 'Trà sữa' ";
+            string query = "SELECT masp, tensp, gia, loai FROM SanPham WHERE LTRIM(RTRIM(LOWER(loai))) = N'trà sữa'";
             List<SanPham> danhSachSanPham = new Modify().SanPhams(query);
 
             // Xóa danh sách cũ
@@ -97,7 +97,6 @@ namespace Tra_Sua
 
             return imagePath;
         }
-
         private void ThemMonVaoDatMon(SanPham mon)
         {
             datMon.ThemMon(mon);
