@@ -10,30 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Tra_Sua
 {
     /// <summary>
-    /// Interaction logic for NhanVien.xaml
+    /// Interaction logic for ThemNV.xaml
     /// </summary>
-    public partial class NhanVien : UserControl
+    public partial class ThemNV : Window
     {
-        public NhanVien()
+        public ThemNV()
         {
             InitializeComponent();
         }
-        private void Mo(Grid panel1, UserControl activeform, UserControl childform)
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (activeform != null)
-            {
-                panel1.Children.Remove(activeform); // Xóa giao diện cũ
-            }
-            activeform = childform; // Gán giao diện mới
-            panel1.Children.Add(childform); // Thêm vào Grid
+
         }
-        UserControl activeform = null;
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ComboBox comboBox = sender as ComboBox;
@@ -46,19 +40,16 @@ namespace Tra_Sua
                 switch (selectedText)
                 {
                     case "Thu Ngân":
-                        Mo(chucvu, activeform, new ThuNgan());
                         break;
 
                     case "Pha Chế":
-                        Mo(chucvu, activeform, new PhaChe());
                         break;
 
                     case "Chạy Bàn":
-                        Mo(chucvu, activeform, new ChayBan());
                         break;
 
                     default:
-                    
+
                         break;
                 }
             }
@@ -66,8 +57,7 @@ namespace Tra_Sua
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ThemNV themNV = new ThemNV();
-            themNV.Show();
+            Close();
         }
     }
 }

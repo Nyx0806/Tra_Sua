@@ -62,7 +62,8 @@ namespace Tra_Sua
         }
         private void Button_Seting(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(" IM NIGGA!");
+            Seting seting = new Seting();
+            seting.Show();
         }
     }
 }

@@ -10,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Tra_Sua
 {
     /// <summary>
-    /// Interaction logic for PhucVu.xaml
+    /// Interaction logic for Seting.xaml
     /// </summary>
-    public partial class ChayBan : UserControl
+    public partial class Seting : Window
     {
-        public ChayBan()
+        public Seting()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        { 
-            XoaNV xoaNV = new XoaNV();
-            xoaNV.Show();
         }
     }
 }

@@ -336,13 +336,13 @@
                 <!-- Menu dấu ba chấm -->
             </Grid>
         </Border>
-        <Button Content="⋮" HorizontalAlignment="Left" Margin="1010,314,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0"/>
-        <Button Content="⋮" HorizontalAlignment="Left" Margin="1010,134,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0"/>
-        <Button Content="⋮" HorizontalAlignment="Left" Margin="652,314,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0"/>
-        <Button Content="⋮" HorizontalAlignment="Left" Margin="652,134,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0"/>
-        <Button Content="⋮" HorizontalAlignment="Left" Margin="303,314,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0"/>
-        <Button Content="⋮" HorizontalAlignment="Left" Margin="303,134,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0"/>
-        <Button Content="⋮" HorizontalAlignment="Left" Margin="303,502,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0"/>
+        <Button Content="⋮" HorizontalAlignment="Left" Margin="1010,314,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0" Click="Button_Click"/>
+        <Button Content="⋮" HorizontalAlignment="Left" Margin="1010,134,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0" Click="Button_Click"/>
+        <Button Content="⋮" HorizontalAlignment="Left" Margin="652,314,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0" Click="Button_Click"/>
+        <Button Content="⋮" HorizontalAlignment="Left" Margin="652,134,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0" Click="Button_Click"/>
+        <Button Content="⋮" HorizontalAlignment="Left" Margin="303,314,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0" Click="Button_Click"/>
+        <Button Content="⋮" HorizontalAlignment="Left" Margin="303,134,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0" Click="Button_Click"/>
+        <Button Content="⋮" HorizontalAlignment="Left" Margin="303,502,0,0" VerticalAlignment="Top" Height="32" Width="24" FontWeight="Bold" FontSize="18" Background="#F4CBA0" BorderBrush="#F4CBA0" Click="Button_Click"/>
 
     </Grid>
 </UserControl>

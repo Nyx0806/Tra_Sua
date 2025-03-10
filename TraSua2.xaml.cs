@@ -16,19 +16,13 @@ using System.Windows.Shapes;
 namespace Tra_Sua
 {
     /// <summary>
-    /// Interaction logic for PhucVu.xaml
+    /// Interaction logic for TraSua2.xaml
     /// </summary>
-    public partial class ChayBan : UserControl
+    public partial class TraSua2 : UserControl
     {
-        public ChayBan()
+        public TraSua2()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        { 
-            XoaNV xoaNV = new XoaNV();
-            xoaNV.Show();
         }
     }
 }

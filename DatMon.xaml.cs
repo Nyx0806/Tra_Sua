@@ -106,6 +106,8 @@ namespace Tra_Sua
         private void InDon_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("In hóa đơn thành công!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+            HoaDon hoaDon = new HoaDon();
+            hoaDon.Show();
         }
         private void Mo(Grid panel1, UserControl activeform, UserControl childform)
         {
