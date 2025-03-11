@@ -55,9 +55,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CapNhapMon.xaml.cs">
+      <DependentUpon>CapNhapMon.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DoanhThu.xaml.cs">
       <DependentUpon>DoanhThu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Employee.cs" />
     <Compile Include="HoaDon.xaml.cs">
       <DependentUpon>HoaDon.xaml</DependentUpon>
     </Compile>
@@ -91,6 +95,9 @@
     </Compile>
     <Compile Include="Sql\Modify.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
+    <Compile Include="ThemMon.xaml.cs">
+      <DependentUpon>ThemMon.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ThemNV.xaml.cs">
       <DependentUpon>ThemNV.xaml</DependentUpon>
     </Compile>
@@ -100,18 +107,16 @@
     <Compile Include="TrangChu.xaml.cs">
       <DependentUpon>TrangChu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TrangChuAnh.xaml.cs">
-      <DependentUpon>TrangChuAnh.xaml</DependentUpon>
-    </Compile>
     <Compile Include="TraSua1.xaml.cs">
       <DependentUpon>TraSua1.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TraSua2.xaml.cs">
-      <DependentUpon>TraSua2.xaml</DependentUpon>
     </Compile>
     <Compile Include="XoaNV.xaml.cs">
       <DependentUpon>XoaNV.xaml</DependentUpon>
     </Compile>
+    <Page Include="CapNhapMon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DatMon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -160,6 +165,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ThemMon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ThemNV.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -172,15 +181,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TrangChuAnh.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="TraSua1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TraSua2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

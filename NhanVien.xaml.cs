@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static Tra_Sua.ThuNgan;
 
 namespace Tra_Sua
 {
@@ -20,9 +22,12 @@ namespace Tra_Sua
     /// </summary>
     public partial class NhanVien : UserControl
     {
+        public ObservableCollection<Employee> Employees { get; set; }
         public NhanVien()
         {
             InitializeComponent();
+            Employees = new ObservableCollection<Employee>();
+
         }
         private void Mo(Grid panel1, UserControl activeform, UserControl childform)
         {
@@ -66,7 +71,7 @@ namespace Tra_Sua
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ThemNV themNV = new ThemNV();
+            ThemNV themNV = new ThemNV(this.Employees);
             themNV.Show();
         }
     }

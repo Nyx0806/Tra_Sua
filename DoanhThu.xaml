@@ -7,36 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="1129" Height="672">
     <Grid Background="#F4D8B5" Margin="0,0,0,10" >
-        <Border Background="#D9D9D9" Width="246" Height="174" CornerRadius="20"
-        HorizontalAlignment="Left" VerticalAlignment="Top" Margin="28,83,0,0">
-            <TextBlock Foreground="White" FontSize="16"
-               HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        </Border>
-        <Border Background="#D9D9D9" Width="246" Height="174" CornerRadius="20"
-            HorizontalAlignment="Left" VerticalAlignment="Top" Margin="295,83,0,0">
-            <TextBlock Foreground="White" FontSize="16"
-                HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        </Border>
-        <Border Background="#D9D9D9" Width="246" Height="174" CornerRadius="20"
-            HorizontalAlignment="Left" VerticalAlignment="Top" Margin="566,83,0,0">
-            <TextBlock Foreground="White" FontSize="16"
-                HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        </Border>
-        <Border Background="#D9D9D9" Width="246" Height="174" CornerRadius="20"
-            HorizontalAlignment="Left" VerticalAlignment="Top" Margin="840,76,0,0">
-            <TextBlock Foreground="White" FontSize="16"
-                HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        </Border>
-        <Border Background="#D9D9D9" Width="260" Height="349" CornerRadius="20"
-            HorizontalAlignment="Left" VerticalAlignment="Top" Margin="826,289,0,0">
-            <TextBlock Foreground="White" FontSize="16"
-                HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        </Border>
-        <Border Background="#D9D9D9" Width="731" Height="349" CornerRadius="20"
-            HorizontalAlignment="Left" VerticalAlignment="Top" Margin="47,289,0,0">
-            <TextBlock Foreground="White" FontSize="16"
-                HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        </Border>
         <Label Content="Bảng Thống kê Doanh Thu" HorizontalAlignment="Left" Margin="64,26,0,0" VerticalAlignment="Top" Width="348" FontSize="24" FontWeight="Bold" Height="52"/>
 
     </Grid>

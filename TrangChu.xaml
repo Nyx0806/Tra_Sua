@@ -50,7 +50,7 @@
                HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Border>
 
-        <Button x:Name="btnDatMon" Content="🧾 Đặt Món" HorizontalAlignment="Left" 
+        <Button x:Name="btnDatMon" Content="🧾 Đặt Món"  HorizontalAlignment="Left" 
         Margin="33,194,0,0" VerticalAlignment="Top" Height="60" Width="223" 
         BorderBrush="#F4CBA0" BorderThickness="3" Background="#F2C193" 
         FontWeight="Bold" Click="Button_Click_DatMon" FontSize="24">

@@ -80,6 +80,7 @@ namespace Tra_Sua
         {
             ResetButtonColors();
             btnCapNhatMon.Background = new SolidColorBrush(Color.FromRgb(206, 152, 89)); // Đổi màu khi bấm
+            Mo(chinhchu , activeform ,new CapNhapMon());
         }
     }
 }
