@@ -11,7 +11,7 @@
             <ItemsControl ItemsSource="{Binding Employees}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <WrapPanel Orientation="Horizontal" ItemWidth="322" ItemHeight="164" />
+                        <WrapPanel Orientation="Horizontal" ItemWidth="350 " ItemHeight="200" />
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
