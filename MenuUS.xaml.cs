@@ -36,9 +36,11 @@ namespace Tra_Sua
             panel1.Children.Add(childform); // Thêm vào Grid
         }
         UserControl activeform = null;
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Collapsed;
+            datMon.QuayLaiManHinhChonBan();
         }
 
         private void Menu_Trasua_Click(object sender, RoutedEventArgs e)
