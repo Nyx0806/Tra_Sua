@@ -285,6 +285,7 @@
     <Content Include="Sql\Tra_Sua.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Sql\Tra_sua.sql" />
     <Content Include="Sql\Tra_Sua_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Tra_Sua.mdf</DependentUpon>
