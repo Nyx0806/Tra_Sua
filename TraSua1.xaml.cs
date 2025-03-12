@@ -13,7 +13,7 @@ namespace Tra_Sua
     public partial class TraSua1 : UserControl
     {
         private DatMon datMon;
-        private string imageFolder = @"F:\C_C#_C++\Visual Studio Code\Tra_Sua\Images\"; // 🔹 Thư mục chứa ảnh
+        private string imageFolder = @"C:\Users\vankh\Source\Repos\Tra_Sua\Images\"; // 🔹 Thư mục chứa ảnh
 
         public TraSua1(DatMon datMon)
         {
