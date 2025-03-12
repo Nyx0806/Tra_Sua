@@ -10,9 +10,9 @@
         <TextBlock HorizontalAlignment="Left" Margin="82,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Label Content="Chức vụ &#xD;&#xA;" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Height="50" Width="94" Foreground="#FF83705E"/>
         <ComboBox FontSize="20"
-          Foreground="Brown" Background="#F4CBA0"
+          Foreground="Gray" Background="#F4CBA0"
           FontWeight="Bold"
-          BorderThickness="0" Padding="5" Margin="123,17,873,599"
+          BorderThickness="0" Padding="5" Margin="123,17,868,599"
           SelectionChanged="ComboBox_SelectionChanged">
             <ComboBoxItem Content="Thu Ngân"/>
             <ComboBoxItem Content="Pha Chế"/>

@@ -13,7 +13,7 @@
         </Grid.ColumnDefinitions>
         <!-- Danh sách bàn -->
         <Grid x:Name="gridMenu">
-            <UniformGrid Columns="4" Rows="4" Grid.Column="0" Margin="10" x:Name="gridBanAn">
+            <UniformGrid Columns="4" Rows="4" Grid.Column="0" Margin="10,42,10,10" x:Name="gridBanAn">
             </UniformGrid >
         </Grid>
         <!-- Khu vực hóa đơn -->

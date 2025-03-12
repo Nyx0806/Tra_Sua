@@ -32,7 +32,7 @@ namespace Tra_Sua
 
         private void CapNhatTrangThaiBan(int soBan, string trangThai)
         {
-            string connectionString = @"Data Source=RAPHAEL\RAPHAELSERVER;Initial Catalog=Quanlitrasua;Persist Security Info=True;User ID=sa;Password=***********;Integrated Security=True";
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\NITRO 5\source\repos\Tra_Sua\Sql\Tra_Sua.mdf"";Integrated Security=True;User ID=sa;Password=***********;Integrated Security=True";
             string query = "UPDATE Ban SET trangthai = @TrangThai WHERE banSo = @BanSo";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -49,7 +49,7 @@ namespace Tra_Sua
 
         private void KhoiTaoBanAn()
         {
-            string connectionString = @"Data Source=RAPHAEL\RAPHAELSERVER;Initial Catalog=Quanlitrasua;Persist Security Info=True;User ID=sa;Password=***********;Integrated Security=True";
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\NITRO 5\source\repos\Tra_Sua\Sql\Tra_Sua.mdf"";Integrated Security=True;User ID=sa;Password=***********;Integrated Security=True";
             string query = "SELECT banSo, trangthai FROM Ban";
 
             using (SqlConnection conn = new SqlConnection(connectionString))

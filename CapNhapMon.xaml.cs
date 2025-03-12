@@ -16,13 +16,19 @@ using System.Windows.Shapes;
 namespace Tra_Sua
 {
     /// <summary>
-    /// Interaction logic for TraSua2.xaml
+    /// Interaction logic for CapNhapMon.xaml
     /// </summary>
-    public partial class TraSua2 : UserControl
+    public partial class CapNhapMon : UserControl
     {
-        public TraSua2()
+        public CapNhapMon()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ThemMon themMon = new ThemMon();
+            themMon.Show();
         }
     }
 }
