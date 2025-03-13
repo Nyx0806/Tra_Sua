@@ -16,30 +16,34 @@
             <DropShadowEffect BlurRadius="20" ShadowDepth="0" Color="Black" Opacity="0.5"/>
         </Border.Effect>
 
-        <Grid Background="#F4D8B5" Margin="0,0,0,10">
+        <Grid Background="#F4D8B5" Margin="0,2,0,8">
             <Border Grid.Column="0" Width="211" Height="204" CornerRadius="25"
                 Background="#F4D8B5" BorderBrush="#CE9859" BorderThickness="8"
                 HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,85,0,0">
                 <TextBlock Text="👤" FontSize="72" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Border>
 
-            <Label Content="Họ Tên" HorizontalAlignment="Left" Margin="304,95,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Height="39" Width="100"/>
-            <Label Content="Ngày Sinh " HorizontalAlignment="Left" Margin="304,145,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Height="39" Width="119"/>
-            <Label Content="SĐT" HorizontalAlignment="Left" Margin="304,197,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Height="39" Width="100"/>
-            <Label Content="Email" HorizontalAlignment="Left" Margin="304,247,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Height="39" Width="100"/>
-            <Label Content="Chức Vụ" HorizontalAlignment="Left" Margin="304,297,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Height="39" Width="100"/>
+            <Label Content="Họ Tên" HorizontalAlignment="Left" Margin="304,58,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Height="39" Width="100"/>
+            <Label Content="Ngày Sinh " HorizontalAlignment="Left" Margin="304,107,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Height="39" Width="119"/>
+            <Label Content="SĐT" HorizontalAlignment="Left" Margin="304,158,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Height="39" Width="100"/>
+            <Label Content="Email" HorizontalAlignment="Left" Margin="304,205,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Height="38" Width="100"/>
+            <Label Content="Chức Vụ" HorizontalAlignment="Left" Margin="304,354,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Height="39" Width="100"/>
 
-            <TextBox x:Name="txtHoTen" HorizontalAlignment="Left" Margin="418,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="311" Height="34" FontSize="20"/>
-            <TextBox x:Name="txtNgaySinh" HorizontalAlignment="Left" Margin="418,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="311" Height="34" FontSize="20"/>
-            <TextBox x:Name="txtSDT" HorizontalAlignment="Left" Margin="418,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="311" Height="34" FontSize="20"/>
-            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="382,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="347" Height="34" FontSize="20"/>
+            <TextBox x:Name="txtHoTen" HorizontalAlignment="Left" Margin="418,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="311" Height="34" FontSize="20"/>
+            <DatePicker x:Name="dpNgaySinh"
+            SelectedDate="{Binding DateOfBirth, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            HorizontalAlignment="Left" Margin="418,109,0,0"
+            VerticalAlignment="Top" Width="311" Height="34"
+            FontSize="20"/>
+            <TextBox x:Name="txtSDT" HorizontalAlignment="Left" Margin="418,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="311" Height="34" FontSize="20"/>
+            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="418,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="311" Height="34" FontSize="20"/>
 
             <ComboBox x:Name="cmbChucVu" FontSize="20" Foreground="Brown" Background="#F4CBA0"
                 FontWeight="Bold" BorderThickness="0" Padding="5"
-                Margin="418,297,190,168">
+                Margin="418,354,204,111">
                 <ComboBoxItem Content="Thu Ngân"/>
-                <ComboBoxItem Content="Pha Chế"/>
-                <ComboBoxItem Content="Chạy Bàn"/>
+                <ComboBoxItem Content="Pha Chê"/>
+                <ComboBoxItem Content="Chay Bàn"/>
             </ComboBox>
             <Button Content="Thêm Nhân Viên " HorizontalAlignment="Left" Margin="506,423,0,0" 
                 VerticalAlignment="Top" Height="49" Width="211" 
@@ -83,6 +87,17 @@
                     </Style>
                 </Button.Style>
             </Button>
+            <Label Content="Giới Tính" HorizontalAlignment="Left" Margin="304,261,0,0" 
+       VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Height="38" Width="100"/>
+            <ComboBox x:Name="cbGioitinh" HorizontalAlignment="Left" Margin="418,261,0,0" 
+          VerticalAlignment="Top" Width="142" Height="34" FontSize="20">
+                <ComboBoxItem Content="Nam"/>
+                <ComboBoxItem Content="Nữ"/>
+            </ComboBox>
+            <TextBox x:Name="txtSDT_Copy1" HorizontalAlignment="Left" Margin="418,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="311" Height="34" FontSize="20"/>
+            <Label Content="Lương" HorizontalAlignment="Left" Margin="304,304,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Height="40" Width="100"/>
+            <Label Content="Mã NV " HorizontalAlignment="Left" Margin="314,15,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Height="38" Width="100"/>
+            <TextBox x:Name="txtma" HorizontalAlignment="Left" Margin="418,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="34" FontSize="20"/>
         </Grid>
     </Border>
 </Window>

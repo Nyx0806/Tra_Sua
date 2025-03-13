@@ -1,54 +1,98 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Tra_Sua
 {
-    /// <summary>
-    /// Interaction logic for ThuNgan.xaml
-    /// </summary>
     public partial class ThuNgan : UserControl
     {
-         public ObservableCollection<Employee> Employees { get; set; } = new ObservableCollection<Employee>();
-        public class Employee
-        {
-            public string Name { get; set; }
-            public string EmployeeId { get; set; }
-            public string DateOfBirth { get; set; }
-            public string PhoneNumber { get; set; }
-            public string Email { get; set; }
-            public string Status { get; set; }  
+        public ObservableCollection<Employee> Employees { get; set; } = new ObservableCollection<Employee>();
 
-        }
         public ThuNgan()
         {
             InitializeComponent();
-            Employees = new ObservableCollection<Employee>
-        {
-                new Employee { EmployeeId = "123", Name = "Nguyễn Văn A", DateOfBirth = "01/01/1990", PhoneNumber = "0987654321", Email = "nguyenvana@gmail.com", Status = "Đang làm" },
-                new Employee { EmployeeId = "456", Name = "Trần Văn B", DateOfBirth = "05/06/1995", PhoneNumber = "0976543210", Email = "tranvanb@gmail.com", Status = "Đã nghỉ" }
-        };
+            LoadDataFromDatabase();
             this.DataContext = this;
         }
 
-
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void LoadDataFromDatabase()
         {
-            XoaNV xoaNV = new XoaNV();
-            xoaNV.Show();
+            string connectionString = "Data Source=ThanhBin;User ID=sa;Password=1234;Encrypt=False;";
+            Employees.Clear();
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT maNV, hoten, chucvu, luong, Email, sdt, TrangThai, gioitinh, ngaysinh FROM NhanVien WHERE chucvu = N'Thu Ngân'";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        Employees.Add(new Employee
+                        {
+                            EmployeeId = reader["maNV"].ToString(),
+                            Name = reader["hoten"].ToString(),
+                            Position = reader["chucvu"].ToString(),
+                            Salary = reader["luong"] != DBNull.Value ? reader.GetDecimal(reader.GetOrdinal("luong")) : 0,
+                            Email = reader["Email"] != DBNull.Value ? reader["Email"].ToString() : "",
+                            PhoneNumber = reader["sdt"] != DBNull.Value ? reader["sdt"].ToString() : "",
+                            Status = reader["TrangThai"].ToString(),
+                            DateOfBirth = reader["ngaysinh"] != DBNull.Value ? reader.GetDateTime(reader.GetOrdinal("ngaysinh")) : DateTime.MinValue,
+                            Gender = reader["gioiTinh"] != DBNull.Value && reader.GetBoolean(reader.GetOrdinal("gioiTinh")) ? "Nam" : "Nữ"
+                        });
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi SQL: " + ex.Message);
+                }
+            }
         }
+
+
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (sender is ComboBox comboBox && comboBox.DataContext is Employee employee)
+            {
+                string newStatus = comboBox.SelectedItem.ToString();
+
+                // Cập nhật trạng thái mới trong danh sách Employees
+                employee.Status = newStatus;
+
+                // Gọi hàm cập nhật trạng thái vào database
+                UpdateEmployeeStatus(employee.EmployeeId, newStatus);
+            }
+        }
+        private void UpdateEmployeeStatus(string employeeId, string newStatus)
+        {
+            string connectionString = "Data Source=ThanhBin;Persist Security Info=True;User ID=sa;Password=******;Encrypt=False";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = "UPDATE NhanVien SET TrangThai = @Status WHERE maNV = @EmployeeId";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Status", newStatus);
+                        command.Parameters.AddWithValue("@EmployeeId", employeeId);
+                        command.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi cập nhật trạng thái: " + ex.Message);
+                }
+            }
+        }
+
     }
 }

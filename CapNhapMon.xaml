@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Tra_Sua"
              mc:Ignorable="d" 
              d:DesignHeight="750" d:DesignWidth="1129" Height="672">
-    <Grid Background="#F4D8B5" Margin="0,0,0,10" >
+    <Grid Background="#F4D8B5" >
         <Button Content="Trà sữa" HorizontalAlignment="Left" Margin="79,27,0,0"
             VerticalAlignment="Top" Height="40" Width="143" Background="#F2C193"
             BorderBrush="#83705E" BorderThickness="4" FontSize="20" FontWeight="Bold" >
@@ -39,7 +39,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button Content="Thêm Món" HorizontalAlignment="Left" Margin="900,595,0,0"
+        <Button Content="Thêm Món" HorizontalAlignment="Left" Margin="900,600,0,0"
             VerticalAlignment="Top" Height="66" Width="183" Background="#F2C193"
             BorderBrush="#83705E" BorderThickness="4" FontSize="20" FontWeight="Bold" Click="Button_Click">
             <Button.Template>

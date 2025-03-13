@@ -28,37 +28,56 @@
                                 <StackPanel Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top">
                                     <Border Width="50" Height="50" CornerRadius="25"
                                             Background="White" BorderBrush="Black" BorderThickness="1"
-                                            HorizontalAlignment="Left">
-                                        <TextBlock Text="👤" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                           HorizontalAlignment="Left">
+                                        <TextBlock Text="👤" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                     </Border>
-                                    <!-- ComboBox chọn trạng thái nhân viên dưới Avatar -->
-                                    <ComboBox SelectedItem="{Binding Status}" Margin="0,5,0,0" Width="100" Background="#F2C193" BorderBrush="#CE9859">
-                                        <ComboBoxItem Content="Đang làm" IsSelected="True"/>
-                                        <ComboBoxItem Content="Đã nghỉ"/>
-                                    </ComboBox>
+
+                                    <Border BorderBrush="Black" BorderThickness="1" CornerRadius="5" Padding="5">
+                                        <TextBlock Text="{Binding Status}" 
+                                                   FontSize="12" 
+                                                   FontWeight="Bold" 
+                                                   HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center"/>
+                                    </Border>
+
+
+                                    <!-- Hiển thị lương ngay dưới ComboBox -->
+                                    <StackPanel Orientation="Vertical" Margin="0,5,0,0">
+                                        <TextBlock Text="Lương:" FontSize="12" FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding Salary, StringFormat='{}{0:C}'}" FontSize="12"/>
+                                    </StackPanel>
+
                                 </StackPanel>
+
                                 <StackPanel Grid.Column="1" Margin="10,0,0,10">
-                                    <TextBlock Text="{Binding Name}" FontSize="18" FontWeight="Bold"/>
+                                    <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold"/>
+
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Mã Nv: " FontSize="14" FontWeight="Bold"/>
-                                        <TextBlock Text="{Binding EmployeeId}" FontSize="14"/>
+                                        <TextBlock Text="Mã Nv: " FontSize="12" FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding EmployeeId}" FontSize="12"/>
                                     </StackPanel>
 
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Ngày Sinh: " FontSize="14" FontWeight="Bold"/>
-                                        <TextBlock Text="{Binding DateOfBirth}" FontSize="14"/>
-                                    </StackPanel>
-                                    <TextBlock Text="Thông tin liên hệ:" FontSize="14" FontWeight="Bold" Margin="0,10,0,0"/>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="📞" FontSize="14"/>
-                                        <TextBlock Text="{Binding PhoneNumber}" FontSize="14" FontWeight="Bold"/>
-                                    </StackPanel>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="✉️" FontSize="14"/>
-                                        <TextBlock Text="{Binding Email}" FontSize="14" FontWeight="Bold"/>
+                                        <TextBlock Text="Giới tính: " FontSize="12" FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding Gender}" FontSize="12"/>
                                     </StackPanel>
 
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Ngày Sinh: " FontSize="12" FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding DateOfBirth, StringFormat='{}{0:dd/MM/yyyy}'}" FontSize="12"/>
+                                    </StackPanel>
+
+                                    <TextBlock Text="Thông tin liên hệ:" FontSize="12" FontWeight="Bold" Margin="0,10,0,0"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="📞" FontSize="12"/>
+                                        <TextBlock Text="{Binding PhoneNumber}" FontSize="12" FontWeight="Bold"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="✉️" FontSize="12"/>
+                                        <TextBlock Text="{Binding Email}" FontSize="12" FontWeight="Bold"/>
+                                    </StackPanel>
                                 </StackPanel>
+
                                 <ItemsControl ItemsSource="{Binding Employees}">
                                     <ItemsControl.ItemTemplate>
                                         <DataTemplate>
